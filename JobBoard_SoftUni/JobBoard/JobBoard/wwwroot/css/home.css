@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.intro {
+    background-image: url('~/img/job-board-software.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: 100%;
+}

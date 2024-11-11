@@ -1,0 +1,19 @@
+﻿@model JobApplicationViewModel
+<link href="~/css/jobs.css" rel="stylesheet" />
+
+<div class="container">
+    <form asp-action="Document" method="post" enctype="multipart/form-data">
+        <label class="">Име</label>
+        <input type="text" class="" placeholder="Име" required />  
+        <label class="">Фамилия</label>
+        <input type="text" class="" placeholder="Фамилия" required />
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button">Избери документ</button>
+            <div class="dropdown-menu">
+                <input type="file" value="Качи файл" required />
+            </div>
+        </div>
+        <input type="submit" class="btn" value="Изпрати"/>
+    </form>
+</div>
+
