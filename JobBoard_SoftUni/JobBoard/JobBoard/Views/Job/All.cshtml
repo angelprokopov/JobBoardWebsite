@@ -1,6 +1,29 @@
-﻿@model JobAllViewModel
+﻿@model IEnumerable<JobBoard.Models.JobAllViewModel>
+
 <link href="~/css/jobs.css" rel="stylesheet" />
 
-<div class="">
-    
+@{
+    ViewData["Title"] = "Обяви за работа";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-3">Налични обяви за работа</h2>
+    <div class="row">
+        @foreach (var job in Model)
+        {
+            <div class="col-md-3">
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">job.Title</h4>
+                        <p class="card-text">
+                            <strong>Фирма:</strong> @job.CompanyName
+                            <strong>Локация</strong> @job.Location
+                            <strong>Дата:</strong> @job.DatePosted.ToShortDateString()
+                        </p>
+                        <a href="@Url.Action("Details","Job", new {id = job.Id})" class="btn btn-primary btn-sm">Детайли</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>

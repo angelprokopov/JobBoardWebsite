@@ -1,1 +1,12 @@
-﻿
+﻿.card {
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.card-title {
+    color:#0056b3;
+    font-weight: bold;
+}

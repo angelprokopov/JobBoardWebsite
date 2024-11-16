@@ -50,9 +50,9 @@ namespace JobBoard.Controllers
             return View();
         }
 
-        public IActionResult GooglieLogin()
+        public IActionResult GoogleLogin()
         {
-            var redirectUrl = Url.Action("Index", "Home");
+            var redirectUrl = Url.Action("Index ", "Home");
             var properties = new AuthenticationProperties { RedirectUri = redirectUrl };
             return Challenge(properties, GoogleDefaults.AuthenticationScheme);
         }

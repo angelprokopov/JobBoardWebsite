@@ -33,6 +33,10 @@ namespace JobBoard
                     options.ClientSecret = config["Authentication:Google:ClientSecret"];
                 });
 
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+            });
 
             builder.Services.ConfigureApplicationCookie(options =>
             {
@@ -53,12 +57,13 @@ namespace JobBoard
                 app.UseHsts();
             }
 
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            app.UseAuthentication();    
             app.UseAuthorization();
 
             app.MapControllerRoute(

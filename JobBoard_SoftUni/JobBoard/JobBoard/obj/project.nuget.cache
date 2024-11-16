@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QXV+JeFSbDs=",
+  "dgSpecHash": "DO8addfQ6TI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Angel\\source\\repos\\JobBoard\\JobBoard\\JobBoard.csproj",
+  "projectFilePath": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\JobBoard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Angel\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Angel\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
