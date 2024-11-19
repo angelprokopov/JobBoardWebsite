@@ -1,6 +1,7 @@
 ﻿using JobBoard.Data;
 using JobBoard.Data.Models;
 using JobBoard.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobBoard.Controllers
@@ -60,6 +61,17 @@ namespace JobBoard.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        public IActionResult Add(JobAddViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(model);
         }
     }
 }

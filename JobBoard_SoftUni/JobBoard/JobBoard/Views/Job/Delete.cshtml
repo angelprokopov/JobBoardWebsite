@@ -1,1 +1,21 @@
-﻿
+﻿@model JobBoard.Models.JobDeleteViewModel
+
+@{
+    ViewData["Title"] = "Изтриване на обява";
+}
+
+<div class="container mt-3">
+    <h2 class=""></h2>
+    <p>Сигурен ли сте, че искате да изтриете обявата?</p>
+    <ul>
+        <li><strong>Длъжност:</strong>@Model.JobTitle</li> 
+        <li><strong>Фирма:</strong>@Model.CompanyName</li>
+        <li><strong>Локация:</strong>@Model.Location</li>
+
+    </ul>
+    <form asp-action="Delete" asp-controller="Job" method="post">
+        <input type="hidden" asp-for="JobId" />
+        <button type="submit" class="btn btn-danger">Изтриване</button>
+        <a asp-action="Index" asp-controller="Job" class="btn btn-secondary">Отказ</a>
+    </form>
+</div>

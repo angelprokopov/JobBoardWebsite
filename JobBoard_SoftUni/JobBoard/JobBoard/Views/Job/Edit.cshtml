@@ -1,1 +1,25 @@
-﻿
+﻿@model JobBoard.Models.JobEditViewModel
+
+@{
+    ViewData["Title"] = "Редактиране на обява";
+}
+
+<div class="container mt-2">
+    <h2 class="text-center">Редактиране на обява</h2>
+    <form asp-action="" method="post" class="mt-5">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-4">
+
+        </div>
+        <div class="mb-4">
+
+        </div>
+        <div class="mb-4">
+
+        </div>
+        <div class="mb-4">
+
+        </div>
+        <button type="submit" class="btn btn-success">Съхрани промените</button>
+    </form>
+</div>

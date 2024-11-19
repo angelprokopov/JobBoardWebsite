@@ -1,1 +1,18 @@
-﻿
+﻿@model JobBoard.Models.JobFavoriteViewModel
+
+@{
+    ViewData["Title"] = "Бележник";
+}
+
+<div class="conteiner mt-3">
+    <h2 class="text-center mb-3"></h2>
+    <form asp-action="" asp-controller="" method="post">
+        <div class="form-group mb-2">
+            <label for="JobId" class="form-label"></label>
+            <select class="form-control" id="JobId" name="JobId" asp-for="Id" asp-items="Model.Jobs" required>
+                <option value="">Избери обява</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Добави в бележник</button>
+    </form>
+</div>
