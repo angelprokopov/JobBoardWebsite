@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobBoard.Data
 {
-    public class JobBoardContext : IdentityDbContext
+    public class JobBoardContext : DbContext
     {   
         public JobBoardContext(DbContextOptions<JobBoardContext> options)
             : base(options)

@@ -9,16 +9,24 @@
     <form asp-action="" method="post" class="mt-5">
         <input type="hidden" asp-for="Id" />
         <div class="mb-4">
-
+            <label for="Title" class="form-label">Длъжност</label>
+            <input asp-for="JobTitle" class="form-control" id="" placeholder="" />
+            <span asp-validation-for="JobTitle" class="text-danger"></span>
         </div>
         <div class="mb-4">
-
+            <label for="Company" class="form-label">Фирма</label>
+            <input asp-for="CompanyName" class="form-control" id="Company" placeholder="Enter company name" />
+            <span asp-validation-for="CompanyName" class="text-danger"></span>
         </div>
         <div class="mb-4">
-
+            <label for="Location" class="form-label">Местоположение</label>
+            <input asp-for="Location" class="form-control" id="Location" placeholder="Enter job location" />
+            <span asp-validation-for="Location" class="text-danger"></span>
         </div>
         <div class="mb-4">
-
+            <label for="Description" class="form-label">Описание</label>
+            <textarea asp-for="Description" class="form-control" id="Description" rows="4"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-success">Съхрани промените</button>
     </form>

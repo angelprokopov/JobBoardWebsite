@@ -35,11 +35,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-    .google-btn img {
+.google-btn img {
         width: 30px;
         margin-right: 10px;
     }
 
-    .google-btn:hover {
+.google-btn:hover {
         background-color: #f1f1f1;
     }
