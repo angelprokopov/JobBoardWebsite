@@ -5,27 +5,28 @@ namespace JobBoard.Models
 {
     public class JobAddViewModel
     {
+        [Required]
         public int JobId { get; set; }
         [Required]
-        [Display(Name = "Job Title")]
+        [Display(Name = "Позиция")]
         public string Title { get; set; }
 
         [Required]
-        [Display(Name = "Job Description")]
+        [Display(Name = "Описание")]
         public string Description { get; set; }
 
         [Required]
-        [Display(Name = "Location")]
+        [Display(Name = "Местоположене")]
         public string Location { get; set; }
 
         [Required]
-        [Display(Name = "Salary")]
+        [Display(Name = "Заплата")]
         public decimal Salary { get; set; }
 
         [Required]
-        [Display(Name = "Category")]
         public int CategoryId { get; set; }
-
+        [Required]
+        [Display(Name = "Категория")]
         public IEnumerable<SelectListItem> Categories  { get; set; }
     }
 }

@@ -7,16 +7,17 @@ namespace JobBoard.Models
         [Required]
         public int JobId { get; set; }
         [Required]
-        [Display(Name = "Full Name")]
+        [Display(Name = "Три имена")]
         public string ApplicantName { get; set; }
         [Required]
         [EmailAddress]
-        [Display(Name = "Email Address")]
+        [Display(Name = "Имейл")]
         public string ApplicantEmail { get; set; }
 
-        [Display(Name = "Upload Resume")]
+        [Display(Name = "Прикачи CV")]
         public IFormFile Resume { get; set; }
-
+        [Required]
+        [Display(Name = "Позиция")]
         public string JobTitle { get; set; }
     }
 }
