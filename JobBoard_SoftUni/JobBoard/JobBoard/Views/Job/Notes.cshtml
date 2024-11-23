@@ -1,18 +1,38 @@
-﻿@model JobBoard.Models.JobFavoriteViewModel
+﻿@model JobFavoriteViewModel
 
 @{
     ViewData["Title"] = "Бележник";
 }
 
-<div class="conteiner mt-3">
-    <h2 class="text-center mb-3"></h2>
-    <form asp-action="" asp-controller="" method="post">
-        <div class="form-group mb-2">
-            <label for="JobId" class="form-label"></label>
-            <select class="form-control" id="JobId" name="JobId" asp-for="Id" asp-items="Model.Jobs" required>
-                <option value="">Избери обява</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-success">Добави в бележник</button>
-    </form>
+<div class="container mt-4">
+    <h3 class="text-center">Бележник</h3>
+    <p class="text-muted text=center"></p>
+    @if (Model.Jobs != null && Model.Jobs.Any()) 
+    {
+       <table class="table table mt-3">
+           <thead class="table-light">
+               <tr>
+                   <th>Позиция</th>
+                   <th>Фирма</th>
+                   <th>Локация</th>
+                   <th>Дата на публикуване</th>
+               </tr>
+           </thead>
+           <tbody>
+               @foreach(var job in Model.Jobs) 
+               {
+                   <tr>
+                       <td>@job.Title</td>
+                       <td>@job.Company</td>
+                       <td>@job.Location</td>
+                       <td>@job.PostedDate.ToShortDateString()</td>
+                       <td>
+                           <a asp-action="Details" asp-route-id="@job.JobId" class="btn btn-sm btn-primary"></a>
+                           <a asp-action="Details" asp-route-id="@job.JobId" class="btn btn-sm btn-danger"></a>
+                       </td>
+                   </tr>
+               }
+           </tbody>
+       </table>
+    }
 </div>

@@ -22,5 +22,6 @@ namespace JobBoard.Data.Models
         public int CategoryId { get; set; }
         public JobCategory Category { get; set; }
         public ICollection<Applications> Applications { get; set; } = new List<Applications>();
+        public ICollection<Favorite> Favorites { get; set;} = new List<Favorite>();
     }
 }

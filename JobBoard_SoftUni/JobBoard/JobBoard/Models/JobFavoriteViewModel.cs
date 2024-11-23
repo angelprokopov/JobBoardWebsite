@@ -1,4 +1,5 @@
-﻿    using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using JobBoard.Data.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace JobBoard.Models
@@ -6,18 +7,23 @@ namespace JobBoard.Models
     public class JobFavoriteViewModel
     {
         [Required]
-        public int Id { get; set; }
-        public SelectList Jobs { get; set; } = new SelectList(Enumerable.Empty<SelectListItem>());
+        public int JobId { get; set; }
         [Required]
         [Display(Name = "Позиция")]
-        public string? JobTitle { get; set; }
+        public string Title { get; set; }
         [Required]
-        [Display(Name = "Име на фирмата")]
-        public string? CompanyName { get; set; }
+        [Display(Name = "Фирма")]
+        public string Company { get; set; }
         [Required]
         [Display(Name = "Местоположение")]
-        public string? Location { get; set; }
-        public int UserId { get; set; }
-        public DateTime AddedOn { get; set; }
+        public string Location { get; set; }
+        [Required]
+        public DateTime PostedDate { get; set; }
+        public List<JobFavoriteViewModel> Jobs { get; set; } 
+    }
+
+    public class JobAllPaginatedViewModel
+    {
+        public PaginatedList<JobFavoriteViewModel> PaginatedList { get; set; }
     }
 }

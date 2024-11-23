@@ -14,5 +14,7 @@ namespace JobBoard.Data.Models
         public string PasswordHash { get; set; } = string.Empty;
         public string Role { get; set; } = string.Empty;
         public ICollection< Applications> Applications { get; set; } = new List<Applications>();  
+        public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
+        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
     }
 }

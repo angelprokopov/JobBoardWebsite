@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace JobBoard.Data
@@ -17,55 +19,64 @@ namespace JobBoard.Data
         {
             base.OnModelCreating(builder);
 
-            // Job configuration
-            builder.Entity<Job>()
-                .HasOne(j => j.Category)
-                .WithMany(j => j.Jobs)
-                .HasForeignKey(j => j.CompanyId)
-                .OnDelete(DeleteBehavior.Restrict);
+            // Composite Key for UserRole
+            builder.Entity<UserRole>()
+                .HasKey(ur => new { ur.UserId, ur.RoleId });
 
-            builder.Entity<Job>()
-                .HasMany(u => u.Applications)
-                .WithOne(j => j.Job)
-                .HasForeignKey(j => j.JobId)
-                .OnDelete(DeleteBehavior.Restrict);
+            // UserRole Relationships
+            builder.Entity<UserRole>()
+                .HasOne(ur => ur.User)
+                .WithMany(u => u.UserRoles)
+                .HasForeignKey(ur => ur.UserId);
 
-            // User configuration
-            builder.Entity<User>()
-                .HasMany(u => u.Applications)
-                .WithOne(a => a.User)
+            builder.Entity<UserRole>()
+                .HasOne(ur => ur.Role)
+                .WithMany(r => r.UserRoles)
+                .HasForeignKey(ur => ur.RoleId);
+
+            // Application Relationships
+            builder.Entity<Applications>()
+                .HasOne(a => a.User)
+                .WithMany(u => u.Applications)
                 .HasForeignKey(a => a.UserId);
 
-            // Company configuration
-            builder.Entity<Company>()
-                .HasMany(u => u.Jobs)
-                .WithOne(u => u.Company)
-                .HasForeignKey(u => u.CompanyId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-
-            // JobCategory configuration
-            builder.Entity<JobCategory>()
-                .HasMany(u => u.Jobs)
-                .WithOne(u => u.Category)
-                .HasForeignKey(u => u.CategoryId);
-
-
-            // Application configuration
             builder.Entity<Applications>()
-                .Property(a => a.Status)
-                .HasDefaultValue("Pending");
+                .HasOne(a => a.Job)
+                .WithMany(j => j.Applications)
+                .HasForeignKey(a => a.JobId);
 
-            // 
-            builder.Entity<User>()
-                .Property(u => u.Id)
-                .HasDefaultValueSql("NEWID()");
+            // Favorite Relationships
+            builder.Entity<Favorite>()
+                .HasOne(f => f.User)
+                .WithMany(u => u.Favorites)
+                .HasForeignKey(f => f.UserId);
+
+            builder.Entity<Favorite>()
+                .HasOne(f => f.Job)
+                .WithMany(j => j.Favorites)
+                .HasForeignKey(f => f.JobId);
+
+            // Employer Relationships
+            builder.Entity<Employer>()
+                .HasOne(e => e.User)
+                .WithMany()
+                .HasForeignKey(e => e.UserId);
+
+            builder.Entity<Employer>()
+                .HasOne(e => e.Company)
+                .WithMany()
+                .HasForeignKey(e => e.CompanyId);
         }
 
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Role> UserRoles { get; set; }
         public DbSet<Job> Jobs { get; set; }
-        public DbSet<Applications> Applications { get; set; }
-        public DbSet<Company> Companies { get; set; }
         public DbSet<JobCategory> JobCategories { get; set; }
+        public DbSet<Applications> Applications { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Document> Documents { get; set; }
+        public DbSet<Employer> Employers { get; set; }
     }
 }
