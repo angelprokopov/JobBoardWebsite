@@ -14,18 +14,25 @@ namespace JobBoard.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult All(int page = 1, int pageSize = 10)
         {
-            var jobs = _context.Jobs
-                .Select(j => new JobAllViewModel
-                {
-                    Id = j.Id,
-                    Title = j.Title,
-                    Description = j.Description,
-                    CompanyName = j.Company.Name,
-                    DatePosted = j.PostDate
-                }).ToList();
-            return View(jobs);
+           var jobsQuery = _context.Jobs.OrderByDescending(x => x.PostDate);
+           int total = jobsQuery.Count();
+            var jobs = jobsQuery
+                 .Skip((page - 1) * pageSize)
+                 .Take(pageSize)
+                 .Select(j => new JobAllViewModel
+                 {
+                     Id = j.Id,
+                     Title = j.Title,
+                     Description = j.Description,
+                     Location = j.Location,
+                     DatePosted = j.PostDate
+                 })
+                 .ToList();
+
+            var model = new PaginatedList<JobAllViewModel>(jobs, total, page, pageSize);
+            return View(model);
         }
 
         public IActionResult Details(int id)

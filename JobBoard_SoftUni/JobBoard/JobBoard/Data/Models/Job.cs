@@ -18,8 +18,8 @@ namespace JobBoard.Data.Models
         public decimal Salary { get; set; }
         public DateTime PostDate { get; set; }
         public int CompanyId { get; set; }
-        public int CategoryId { get; set; }
         public Company Company { get; set; }
+        public int CategoryId { get; set; }
         public JobCategory Category { get; set; }
         public ICollection<Applications> Applications { get; set; } = new List<Applications>();
     }

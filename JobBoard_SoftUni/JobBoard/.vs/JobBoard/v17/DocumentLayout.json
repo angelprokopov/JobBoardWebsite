@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\views\\job\\all.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\views\\job\\all.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +55,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "JobBoard\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "JobBoard\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T11:51:48.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "JobBoard\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "JobBoard\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T11:18:14.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JobController.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Controllers\\JobController.cs",
+              "RelativeDocumentMoniker": "JobBoard\\Controllers\\JobController.cs",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Controllers\\JobController.cs",
+              "RelativeToolTip": "JobBoard\\Controllers\\JobController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T10:22:13.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "All.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Job\\All.cshtml",
+              "RelativeDocumentMoniker": "JobBoard\\Views\\Job\\All.cshtml",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Job\\All.cshtml",
+              "RelativeToolTip": "JobBoard\\Views\\Job\\All.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T10:11:05.748Z",
+              "EditorCaption": ""
             }
           ]
         }

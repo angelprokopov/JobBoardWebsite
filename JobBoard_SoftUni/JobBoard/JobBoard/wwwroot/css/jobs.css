@@ -10,3 +10,28 @@
     color:#0056b3;
     font-weight: bold;
 }
+
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.pagination a {
+    padding: 4px 9px;
+    border: 1px solid #007bff;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination span {
+    padding: 4px 8px;
+    color: #555;
+}

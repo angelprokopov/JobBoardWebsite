@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\JobBoard.bundle.scp.css",
-      "PackagePath": "staticwebassets\\JobBoard.bundle.scp.css"
+      "PackagePath": "staticwebassets\\JobBoard.wcuo9rxe6t.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
@@ -271,6 +271,10 @@
     {
       "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.JobBoard.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.JobBoard.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<JobBoard.Models.JobAllViewModel>
+﻿@using JobBoard.Data.Models
+@model PaginatedList<JobAllViewModel>
 
 <link href="~/css/jobs.css" rel="stylesheet" />
 
@@ -24,6 +25,20 @@
                     </div>
                 </div>
             </div>
+        }
+    </div>
+
+    <div class="pagination">
+        @if (Model.HasPreviousPage)
+        {
+            <a asp-action="AllJobs" asp-route-page="@(Model.PageIndex - 1)">Предишна страница</a>
+        }
+
+        <span>Страница @Model.PageIndex от @Model.TotalPages</span>
+
+        @if(Model.HasNextPage) 
+        {
+            <a asp-action="AllJobs" asp-route-page="@(Model.PageIndex + 1)">Следваща страница</a>
         }
     </div>
 </div>

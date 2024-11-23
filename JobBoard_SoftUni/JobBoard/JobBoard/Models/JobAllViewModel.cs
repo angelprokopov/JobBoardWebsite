@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using JobBoard.Data.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace JobBoard.Models
 {
@@ -19,5 +20,10 @@ namespace JobBoard.Models
         [Display(Name = "Име на компанията")]
         public string? CompanyName { get; set; }
         public DateTime DatePosted { get; set; }
+    }
+
+    public class JobAllPaginatedViewModel
+    {
+        public PaginatedList<JobAllViewModel> PaginatedList { get; set; }
     }
 }

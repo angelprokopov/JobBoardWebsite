@@ -586,3 +586,7 @@ C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net8.0\ref
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net8.0\JobBoard.pdb
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net8.0\JobBoard.genruntimeconfig.cache
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net8.0\ref\JobBoard.dll
+C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\bin\Debug\net8.0\JobBoard.staticwebassets.endpoints.json
+C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net8.0\staticwebassets\msbuild.JobBoard.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
