@@ -8,7 +8,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace JobBoard.Data
 {
-    public class JobBoardContext : DbContext
+    public class JobBoardContext : IdentityDbContext<User, Role, Guid, IdentityUserClaim<Guid>, UserRole, IdentityUserLogin<Guid>, IdentityRoleClaim<Guid>, IdentityUserToken<Guid>>
     {   
         public JobBoardContext(DbContextOptions<JobBoardContext> options)
             : base(options)

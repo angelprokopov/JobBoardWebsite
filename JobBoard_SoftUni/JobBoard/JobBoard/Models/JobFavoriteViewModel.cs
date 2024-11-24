@@ -19,11 +19,15 @@ namespace JobBoard.Models
         public string Location { get; set; }
         [Required]
         public DateTime PostedDate { get; set; }
-        public List<JobFavoriteViewModel> Jobs { get; set; } 
     }
 
-    public class JobAllPaginatedViewModel
+    public class FavoriteViewModel
     {
-        public PaginatedList<JobFavoriteViewModel> PaginatedList { get; set; }
+        public List<JobFavoriteViewModel> FavoriteJobs { get; set; }
+        public int PageIndex { get; set; }
+        public int TotalPages { get; set; }
+
+        public bool HasPreviousPage => PageIndex > 1;
+        public bool HasNextPage => PageIndex < TotalPages;
     }
 }

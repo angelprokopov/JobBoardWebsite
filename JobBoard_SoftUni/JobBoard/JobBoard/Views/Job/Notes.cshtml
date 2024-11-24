@@ -1,4 +1,4 @@
-﻿@model JobFavoriteViewModel
+﻿@model FavoriteViewModel
 
 @{
     ViewData["Title"] = "Бележник";
@@ -7,7 +7,7 @@
 <div class="container mt-4">
     <h3 class="text-center">Бележник</h3>
     <p class="text-muted text=center"></p>
-    @if (Model.Jobs != null && Model.Jobs.Any()) 
+    @if (Model.FavoriteJobs != null && Model.FavoriteJobs.Any()) 
     {
        <table class="table table mt-3">
            <thead class="table-light">
@@ -19,7 +19,7 @@
                </tr>
            </thead>
            <tbody>
-               @foreach(var job in Model.Jobs) 
+               @foreach(var job in Model.FavoriteJobs) 
                {
                    <tr>
                        <td>@job.Title</td>
@@ -27,12 +27,40 @@
                        <td>@job.Location</td>
                        <td>@job.PostedDate.ToShortDateString()</td>
                        <td>
-                           <a asp-action="Details" asp-route-id="@job.JobId" class="btn btn-sm btn-primary"></a>
-                           <a asp-action="Details" asp-route-id="@job.JobId" class="btn btn-sm btn-danger"></a>
+                           <a asp-action="Details" asp-route-id="@job.JobId" class="btn btn-sm btn-primary">Детайли</a>
+                           <a asp-action="RemoveFromFavorite" asp-route-id="@job.JobId" class="btn btn-sm btn-danger">Премахни</a>
                        </td>
                    </tr>
                }
            </tbody>
        </table>
+        <nav>
+            <ul class="pagination justify-content-center">
+                @if (Model.HasPreviousPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" asp-action="Favorites" asp-route-page="@(Model.PageIndex - 1)">Предишна</a>
+                    </li>
+                }
+
+                <li class="page-item disabled">
+                    <span class="page-link">Страница @Model.PageIndex от @Model.TotalPages</span>
+                </li>
+
+                @if (Model.HasNextPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" asp-action="Favorites" asp-route-page="@(Model.PageIndex + 1)">Следваща</a>
+                    </li>
+                }
+            </ul>
+        </nav>
     }
+    else
+    {
+        <div class="alert alert-info mt-4 text-center">
+           Все още нямате добавени обяви за работа в бележник!
+        </div>
+    }
+}
 </div>

@@ -1,4 +1,5 @@
 using JobBoard.Data;
+using JobBoard.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,12 +18,17 @@ namespace JobBoard
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => {
+            builder.Services.AddIdentity<User, Role>()
+                .AddEntityFrameworkStores<JobBoardContext>()
+                .AddDefaultTokenProviders();
+
+            builder.Services.AddDefaultIdentity<User>(options => {
                 options.Password.RequireDigit = true;
                 options.SignIn.RequireConfirmedAccount = true;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(8); //
                 options.Lockout.MaxFailedAccessAttempts = 6;
             })
+                .AddRoles<Role>()
                  .AddEntityFrameworkStores<JobBoardContext>();
             builder.Services.AddControllersWithViews();
 
@@ -36,6 +42,14 @@ namespace JobBoard
             builder.Services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+            });
+
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                options.ListenLocalhost(7136, listenOptions =>
+                {
+                    listenOptions.UseHttps();
+                });
             });
 
             builder.Services.ConfigureApplicationCookie(options =>

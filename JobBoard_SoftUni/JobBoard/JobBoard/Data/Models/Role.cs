@@ -1,18 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace JobBoard.Data.Models
 {
-    public class Role
+    public class Role : IdentityRole<Guid>
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public string Name { get; set; } = string.Empty;
 
         public ICollection<UserRole> UserRoles { get; set;} = new List<UserRole>();
     }
 
-    public class UserRole
+    public class UserRole : IdentityUserRole<Guid>
     {
         public Guid UserId { get; set; }
         public User User { get; set; }
