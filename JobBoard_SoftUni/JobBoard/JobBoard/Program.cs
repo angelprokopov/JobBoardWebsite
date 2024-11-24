@@ -25,8 +25,8 @@ namespace JobBoard
             builder.Services.AddDefaultIdentity<User>(options => {
                 options.Password.RequireDigit = true;
                 options.SignIn.RequireConfirmedAccount = true;
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(8); //
-                options.Lockout.MaxFailedAccessAttempts = 6;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(8); // The time that the user have before he's lockout
+                options.Lockout.MaxFailedAccessAttempts = 6; // Maximum attepts for entering the password
             })
                 .AddRoles<Role>()
                  .AddEntityFrameworkStores<JobBoardContext>();

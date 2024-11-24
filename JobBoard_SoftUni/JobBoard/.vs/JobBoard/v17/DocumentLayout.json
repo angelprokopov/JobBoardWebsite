@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\data\\jobboardcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +62,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "JobBoard\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "JobBoard\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T15:26:54.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "JobBoard\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "JobBoard\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T15:26:49.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "JobBoard\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "JobBoard\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T15:01:25.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "JobBoard\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "JobBoard\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:01:12.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "JobBoardContext.cs",
               "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Data\\JobBoardContext.cs",
               "RelativeDocumentMoniker": "JobBoard\\Data\\JobBoardContext.cs",
@@ -58,19 +122,7 @@
               "RelativeToolTip": "JobBoard\\Data\\JobBoardContext.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T13:23:37.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Program.cs",
-              "RelativeDocumentMoniker": "JobBoard\\Program.cs",
-              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Program.cs",
-              "RelativeToolTip": "JobBoard\\Program.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAQwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T13:10:16.752Z",
+              "WhenOpened": "2024-11-24T13:23:37.801Z",
               "EditorCaption": ""
             }
           ]
