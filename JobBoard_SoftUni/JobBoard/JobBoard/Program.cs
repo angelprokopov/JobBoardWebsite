@@ -61,6 +61,8 @@ namespace JobBoard
                 });
             });
 
+            builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
+
             builder.Services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Account/Login";
