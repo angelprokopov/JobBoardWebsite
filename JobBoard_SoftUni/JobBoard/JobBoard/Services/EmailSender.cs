@@ -16,7 +16,7 @@ namespace JobBoard.Services
 
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            var client = new SendGridClient(options.SendGridApiKey);
+            var client = new SendGridClient(options.SendGridApiKey);    
             var from = new EmailAddress("", "");
             var to = new EmailAddress(email);
             var message = MailHelper.CreateSingleEmail(from, to, subject, "", htmlMessage);
