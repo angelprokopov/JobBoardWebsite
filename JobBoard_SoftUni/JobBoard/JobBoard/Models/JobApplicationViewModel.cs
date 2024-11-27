@@ -19,5 +19,7 @@ namespace JobBoard.Models
         [Required]
         [Display(Name = "Позиция")]
         public string JobTitle { get; set; }
+        public DateTime ApplicationDate { get; set; }
+        public string Status { get; set; }
     }
 }

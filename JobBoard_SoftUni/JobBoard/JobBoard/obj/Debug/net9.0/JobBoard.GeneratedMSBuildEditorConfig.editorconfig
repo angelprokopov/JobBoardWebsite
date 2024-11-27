@@ -84,8 +84,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Angel/Downloads/JobBoard_SoftUni/JobBoard/JobBoard/Views/Job/AllApplications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEFsbEFwcGxpY2F0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Angel/Downloads/JobBoard_SoftUni/JobBoard/JobBoard/Views/Job/Application.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEFwcGxpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Angel/Downloads/JobBoard_SoftUni/JobBoard/JobBoard/Views/Job/Companies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXENvbXBhbmllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Angel/Downloads/JobBoard_SoftUni/JobBoard/JobBoard/Views/Job/Delete.cshtml]

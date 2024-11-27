@@ -71,7 +71,7 @@ namespace JobBoard.Controllers
                 .Where (a=>a.UserId == userId)
                 .ToListAsync();
             
-            return View(applications);
+            return RedirectToAction("MyApplications");
         }
     }
 }

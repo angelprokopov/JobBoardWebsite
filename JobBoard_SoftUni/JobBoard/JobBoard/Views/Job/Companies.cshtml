@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CompanyViewModel>
+
+@{
+    ViewData["Title"] = "Всички компании";
+}
+
+<div class="container mt-3">
+    <h2 class="">Списък на компаниите</h2>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Име</th>
+                    <th>Индустрия</th>
+                    <th>Местоположение</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var company in Model)
+                {
+                    <tr>
+                        <td>@company.Name</td>
+                        <td>@company.Industry</td>
+                        <td>@company.Location</td>
+                        <td>
+                            <a class="btn btn-info" href="@Url.Action("Details", "Company", new {id = company.Id})">Детайли</a>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a class="btn btn-warning" href="@Url.Action("Edit","Copmany", new {id = company.Id})">Редакция</a>
+                                <a class="btn btn-danger" href="@Url.Action("Delete","Company", new {id = company.Id})">Изтрий</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

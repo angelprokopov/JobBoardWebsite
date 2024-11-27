@@ -1,0 +1,36 @@
+﻿@model IEnumerable<JobApplicationViewModel>
+
+@{
+    ViewData[""] = "";
+}
+
+<div class="">
+    <h2 class=""></h2>
+    <table class="">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var application in Model)
+            {
+                <tr>
+                    <td>@application.JobTitle</td>
+                    <td>@application.ApplicantName</td>
+                    <td>@application.ApplicantEmail</td>
+                    <td>@application.ApplicationDate.ToString("g")</td>
+                    <td>@application.Status</td>
+                    <td>
+                        <a class="btn btn-info" href="@Url.Action("Details","Application", new {id = application.JobId})">Детайли</a>
+                        <a class="btn btn-warning" href="@Url.Action("Withdraw","Application", new {id = application.JobId})">Отказ от кандидатурата</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -26,6 +26,27 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Job" asp-action="All">Обяви</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated) 
+                        {
+                            <li class="nav-item">
+                                <a class="" href="@Url.Action("Index","Company")">Компании</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="" href="@Url.Action("Index","Document")">Документи</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="" href="@Url.Action("Index","Application")">Кандидаствания</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="" href="@Url.Action("Create","Company")">Добавяне на нова компания</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="" href="@Url.Action("","")"></a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
