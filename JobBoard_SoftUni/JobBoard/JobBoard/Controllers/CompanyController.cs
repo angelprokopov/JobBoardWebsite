@@ -15,10 +15,20 @@ namespace JobBoard.Controllers
         }
 
         [Authorize(Roles = "Admin")]
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var companies = _context.Companies.ToListAsync();
             return View(companies);
         }
+
+        [Authorize(Roles ="Admin,Employer")]
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
+
+
     }
 }

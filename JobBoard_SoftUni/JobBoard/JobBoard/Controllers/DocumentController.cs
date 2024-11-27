@@ -30,7 +30,7 @@ namespace JobBoard.Controllers
         {
             if (file == null || file.Length == 0)
             {
-                return BadRequest("");
+                return BadRequest("Не е избран файл.");
             }
             var path = Path.Combine(_environment.WebRootPath, "", file.FileName);
 
@@ -56,7 +56,19 @@ namespace JobBoard.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
+            var document = await _context.Documents.FindAsync(id);
+            if (document == null || document.UserId != Guid.Parse(User.FindFirst("UserId")?.Value))
+            {
+                return NotFound();
+            }
 
+            var filePath = Path.Combine(_environment.WebRootPath,document.FileName.TrimStart("/"));
+            if (System.IO.File.Exists(filePath)) 
+                System.IO.File.Delete(filePath);
+
+            _context.Documents.Remove(document);
+            await _context.SaveChanges();
+           
             return RedirectToAction(nameof(Index));
         }
     }
