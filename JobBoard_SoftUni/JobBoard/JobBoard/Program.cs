@@ -1,6 +1,7 @@
 using JobBoard.Data;
 using JobBoard.Data.Models;
 using JobBoard.Services;
+using JobBoard.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -62,6 +63,8 @@ namespace JobBoard
             });
 
             builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
+
+            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             builder.Services.ConfigureApplicationCookie(options =>
             {

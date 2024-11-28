@@ -62,12 +62,12 @@ namespace JobBoard.Controllers
                 return NotFound();
             }
 
-            var filePath = Path.Combine(_environment.WebRootPath,document.FileName.TrimStart("/"));
+            var filePath = Path.Combine(_environment.WebRootPath,document.FilePath.TrimStart('/'));
             if (System.IO.File.Exists(filePath)) 
                 System.IO.File.Delete(filePath);
 
             _context.Documents.Remove(document);
-            await _context.SaveChanges();
+            await _context.SaveChangesAsync();
            
             return RedirectToAction(nameof(Index));
         }

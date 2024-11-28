@@ -1,5 +1,6 @@
 ﻿using JobBoard.Data;
 using JobBoard.Data.Models;
+using JobBoard.Interfaces;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,14 +10,21 @@ namespace JobBoard.Controllers
     public class JobController : Controller
     {
         private readonly JobBoardContext _context;
+        private IRepository<Job> @object;
+
         public JobController(JobBoardContext context)
         {
             _context = context;
         }
 
-        public IActionResult All(int page = 1, int pageSize = 10)
+        public JobController(IRepository<Job> @object)
         {
-           var jobsQuery = _context.Jobs.OrderByDescending(x => x.PostDate);
+            this.@object = @object;
+        }
+
+        public async Task<IActionResult> All(int page = 1, int pageSize = 10)
+        {
+           var jobsQuery =  _context.Jobs.OrderByDescending(x => x.PostDate);
            int total = jobsQuery.Count();
             var jobs = jobsQuery
                  .Skip((page - 1) * pageSize)
