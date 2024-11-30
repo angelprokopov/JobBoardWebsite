@@ -6,7 +6,7 @@ namespace JobBoard.Data.Models
     public class Job
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         [Required]
         public string Title { get; set; } = string.Empty;
         [Required]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VLovqYgQW6EeqfBb+5kLsK8yEXZ/PtYYG8kSnKeIcPY=",
+  "Hash": "KMdWKPHDceBG8ifIjtstWn4rQptF6F+c1ndTLF4vsjs=",
   "Source": "JobBoard",
   "BasePath": "_content/JobBoard",
   "Mode": "Default",
@@ -1928,12 +1928,12 @@
       "OriginalItemSpec": "C:\\Users\\Angel\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\V5\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-pt3ggjny14.gz",
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
       "SourceId": "JobBoard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/JobBoard",
-      "RelativePath": "css/home#[.{fingerprint=pt3ggjny14}]?.css.gz",
+      "RelativePath": "css/home#[.{fingerprint=adki8dftcj}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1942,8 +1942,8 @@
       "RelatedAsset": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "fmemi14dzt",
-      "Integrity": "eZZ7oZllmHawvkAYG7JrXAQ6FJQsrECpQsjBruH6U9g=",
+      "Fingerprint": "ytf08wuslm",
+      "Integrity": "2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css"
@@ -3377,27 +3377,6 @@
       "OriginalItemSpec": "C:\\Users\\Angel\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\V5\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\rxfwnm0uqn-uj3z22w62c.gz",
-      "SourceId": "JobBoard",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/JobBoard",
-      "RelativePath": "img/layered-steps-haikei#[.{fingerprint=uj3z22w62c}]?.svg.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\layered-steps-haikei.svg",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "utb5s3wvlc",
-      "Integrity": "3uwd0hAL5Niuy/CjfmoBtink1j60+ztz0hmBHAkkNno=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\layered-steps-haikei.svg"
-    },
-    {
       "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\s3tglgz8hr-kbrnm935zg.gz",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
@@ -4007,6 +3986,27 @@
       "OriginalItemSpec": "C:\\Users\\Angel\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\V5\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\zitk8ck37u-uj3z22w62c.gz",
+      "SourceId": "JobBoard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/JobBoard",
+      "RelativePath": "images/layered-steps-haikei#[.{fingerprint=uj3z22w62c}]?.svg.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\layered-steps-haikei.svg",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "utb5s3wvlc",
+      "Integrity": "3uwd0hAL5Niuy/CjfmoBtink1j60+ztz0hmBHAkkNno=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\layered-steps-haikei.svg"
+    },
+    {
       "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\zzna4nrm5w-notf2xhcfb.gz",
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
@@ -4084,8 +4084,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pt3ggjny14",
-      "Integrity": "XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU=",
+      "Fingerprint": "adki8dftcj",
+      "Integrity": "nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
@@ -4196,12 +4196,33 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\android-chrome-512x512.png",
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\AdobeStock_753208233_Preview.jpeg",
       "SourceId": "JobBoard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\",
       "BasePath": "_content/JobBoard",
-      "RelativePath": "img/android-chrome-512x512#[.{fingerprint}]?.png",
+      "RelativePath": "images/AdobeStock_753208233_Preview#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2ijxuixg64",
+      "Integrity": "BqkcaQ9JWZWvutAlflhkCVHeuGUIshPsMblmAFC+3L4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\AdobeStock_753208233_Preview.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\android-chrome-512x512.png",
+      "SourceId": "JobBoard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\",
+      "BasePath": "_content/JobBoard",
+      "RelativePath": "images/android-chrome-512x512#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4214,15 +4235,15 @@
       "Integrity": "df/EMJqvw9vLrp/xda+fdE4YRAw8Z3SwJCdLR3IorHY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\android-chrome-512x512.png"
+      "OriginalItemSpec": "wwwroot\\images\\android-chrome-512x512.png"
     },
     {
-      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\favicon-32x32.png",
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\favicon-32x32.png",
       "SourceId": "JobBoard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\",
       "BasePath": "_content/JobBoard",
-      "RelativePath": "img/favicon-32x32#[.{fingerprint}]?.png",
+      "RelativePath": "images/favicon-32x32#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4235,15 +4256,15 @@
       "Integrity": "QX+b8dva1AKimfTZAUHb1qaebHRnCh9Ca1hdzNkBpq0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\favicon-32x32.png"
+      "OriginalItemSpec": "wwwroot\\images\\favicon-32x32.png"
     },
     {
-      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\job-board-software.png",
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\job-board-software.png",
       "SourceId": "JobBoard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\",
       "BasePath": "_content/JobBoard",
-      "RelativePath": "img/job-board-software#[.{fingerprint}]?.png",
+      "RelativePath": "images/job-board-software#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4256,15 +4277,15 @@
       "Integrity": "QQdlkU+QLGdPCgjmLpdCBmoww8/HiiWZw7MM7iYkcXo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\job-board-software.png"
+      "OriginalItemSpec": "wwwroot\\images\\job-board-software.png"
     },
     {
-      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\layered-steps-haikei.svg",
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\layered-steps-haikei.svg",
       "SourceId": "JobBoard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\",
       "BasePath": "_content/JobBoard",
-      "RelativePath": "img/layered-steps-haikei#[.{fingerprint}]?.svg",
+      "RelativePath": "images/layered-steps-haikei#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4277,7 +4298,7 @@
       "Integrity": "Rvk0KTHMvsqHCyoWw5HLh+ns6B/Ofvotxyi3JU4xPOw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\layered-steps-haikei.svg"
+      "OriginalItemSpec": "wwwroot\\images\\layered-steps-haikei.svg"
     },
     {
       "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\js\\site.js",
@@ -5500,13 +5521,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/home.css",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-pt3ggjny14.gz",
+      "Route": "css/home.adki8dftcj.css",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003891050584"
+          "Quality": "0.011494252874"
         }
       ],
       "ResponseHeaders": [
@@ -5516,19 +5537,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "256"
+          "Value": "86"
         },
         {
           "Name": "ETag",
-          "Value": "\"eZZ7oZllmHawvkAYG7JrXAQ6FJQsrECpQsjBruH6U9g=\""
+          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 Nov 2024 16:03:48 GMT"
+          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -5544,18 +5565,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU=\""
+          "Value": "W/\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "adki8dftcj"
+        },
+        {
+          "Name": "label",
+          "Value": "css/home.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU="
+          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
         }
       ]
     },
     {
-      "Route": "css/home.css",
+      "Route": "css/home.adki8dftcj.css",
       "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5565,7 +5594,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "449"
+          "Value": "76"
         },
         {
           "Name": "Content-Type",
@@ -5573,121 +5602,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU=\""
+          "Value": "\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 Nov 2024 16:03:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.css.gz",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-pt3ggjny14.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "256"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eZZ7oZllmHawvkAYG7JrXAQ6FJQsrECpQsjBruH6U9g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 24 Nov 2024 16:03:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-eZZ7oZllmHawvkAYG7JrXAQ6FJQsrECpQsjBruH6U9g="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.pt3ggjny14.css",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-pt3ggjny14.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003891050584"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "256"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eZZ7oZllmHawvkAYG7JrXAQ6FJQsrECpQsjBruH6U9g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 24 Nov 2024 16:03:48 GMT"
+          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pt3ggjny14"
+          "Value": "adki8dftcj"
         },
         {
           "Name": "label",
@@ -5695,13 +5624,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU="
+          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
         }
       ]
     },
     {
-      "Route": "css/home.pt3ggjny14.css",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
+      "Route": "css/home.adki8dftcj.css.gz",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5710,7 +5639,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "449"
+          "Value": "86"
         },
         {
           "Name": "Content-Type",
@@ -5718,56 +5647,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU=\""
+          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 Nov 2024 16:03:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pt3ggjny14"
-        },
-        {
-          "Name": "label",
-          "Value": "css/home.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-XaNvrn/opoEhGYUgy15IPiF680agrv1EyHa0AGctWVU="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.pt3ggjny14.css.gz",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-pt3ggjny14.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "256"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eZZ7oZllmHawvkAYG7JrXAQ6FJQsrECpQsjBruH6U9g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 24 Nov 2024 16:03:48 GMT"
+          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5785,7 +5669,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pt3ggjny14"
+          "Value": "adki8dftcj"
         },
         {
           "Name": "label",
@@ -5793,7 +5677,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eZZ7oZllmHawvkAYG7JrXAQ6FJQsrECpQsjBruH6U9g="
+          "Value": "sha256-2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.css",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.011494252874"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.css",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "76"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.css.gz",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4="
         }
       ]
     },
@@ -15893,8 +15914,90 @@
       ]
     },
     {
-      "Route": "img/android-chrome-512x512.nhho67xlxe.png",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\android-chrome-512x512.png",
+      "Route": "images/AdobeStock_753208233_Preview.2ijxuixg64.jpeg",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\AdobeStock_753208233_Preview.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BqkcaQ9JWZWvutAlflhkCVHeuGUIshPsMblmAFC+3L4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Nov 2024 20:57:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2ijxuixg64"
+        },
+        {
+          "Name": "label",
+          "Value": "images/AdobeStock_753208233_Preview.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BqkcaQ9JWZWvutAlflhkCVHeuGUIshPsMblmAFC+3L4="
+        }
+      ]
+    },
+    {
+      "Route": "images/AdobeStock_753208233_Preview.jpeg",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\AdobeStock_753208233_Preview.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BqkcaQ9JWZWvutAlflhkCVHeuGUIshPsMblmAFC+3L4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 30 Nov 2024 20:57:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BqkcaQ9JWZWvutAlflhkCVHeuGUIshPsMblmAFC+3L4="
+        }
+      ]
+    },
+    {
+      "Route": "images/android-chrome-512x512.nhho67xlxe.png",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\android-chrome-512x512.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15929,7 +16032,7 @@
         },
         {
           "Name": "label",
-          "Value": "img/android-chrome-512x512.png"
+          "Value": "images/android-chrome-512x512.png"
         },
         {
           "Name": "integrity",
@@ -15938,8 +16041,8 @@
       ]
     },
     {
-      "Route": "img/android-chrome-512x512.png",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\android-chrome-512x512.png",
+      "Route": "images/android-chrome-512x512.png",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\android-chrome-512x512.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15975,8 +16078,8 @@
       ]
     },
     {
-      "Route": "img/favicon-32x32.7eswl9zoqt.png",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\favicon-32x32.png",
+      "Route": "images/favicon-32x32.7eswl9zoqt.png",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\favicon-32x32.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16011,7 +16114,7 @@
         },
         {
           "Name": "label",
-          "Value": "img/favicon-32x32.png"
+          "Value": "images/favicon-32x32.png"
         },
         {
           "Name": "integrity",
@@ -16020,8 +16123,8 @@
       ]
     },
     {
-      "Route": "img/favicon-32x32.png",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\favicon-32x32.png",
+      "Route": "images/favicon-32x32.png",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\favicon-32x32.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16057,8 +16160,8 @@
       ]
     },
     {
-      "Route": "img/job-board-software.png",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\job-board-software.png",
+      "Route": "images/job-board-software.png",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\job-board-software.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16094,8 +16197,8 @@
       ]
     },
     {
-      "Route": "img/job-board-software.thskuf8137.png",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\job-board-software.png",
+      "Route": "images/job-board-software.thskuf8137.png",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\job-board-software.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16130,7 +16233,7 @@
         },
         {
           "Name": "label",
-          "Value": "img/job-board-software.png"
+          "Value": "images/job-board-software.png"
         },
         {
           "Name": "integrity",
@@ -16139,8 +16242,8 @@
       ]
     },
     {
-      "Route": "img/layered-steps-haikei.svg",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\rxfwnm0uqn-uj3z22w62c.gz",
+      "Route": "images/layered-steps-haikei.svg",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\zitk8ck37u-uj3z22w62c.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -16194,8 +16297,8 @@
       ]
     },
     {
-      "Route": "img/layered-steps-haikei.svg",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\layered-steps-haikei.svg",
+      "Route": "images/layered-steps-haikei.svg",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\layered-steps-haikei.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16231,8 +16334,8 @@
       ]
     },
     {
-      "Route": "img/layered-steps-haikei.svg.gz",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\rxfwnm0uqn-uj3z22w62c.gz",
+      "Route": "images/layered-steps-haikei.svg.gz",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\zitk8ck37u-uj3z22w62c.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16276,8 +16379,8 @@
       ]
     },
     {
-      "Route": "img/layered-steps-haikei.uj3z22w62c.svg",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\rxfwnm0uqn-uj3z22w62c.gz",
+      "Route": "images/layered-steps-haikei.uj3z22w62c.svg",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\zitk8ck37u-uj3z22w62c.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -16330,7 +16433,7 @@
         },
         {
           "Name": "label",
-          "Value": "img/layered-steps-haikei.svg"
+          "Value": "images/layered-steps-haikei.svg"
         },
         {
           "Name": "integrity",
@@ -16339,8 +16442,8 @@
       ]
     },
     {
-      "Route": "img/layered-steps-haikei.uj3z22w62c.svg",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\layered-steps-haikei.svg",
+      "Route": "images/layered-steps-haikei.uj3z22w62c.svg",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\layered-steps-haikei.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16375,7 +16478,7 @@
         },
         {
           "Name": "label",
-          "Value": "img/layered-steps-haikei.svg"
+          "Value": "images/layered-steps-haikei.svg"
         },
         {
           "Name": "integrity",
@@ -16384,8 +16487,8 @@
       ]
     },
     {
-      "Route": "img/layered-steps-haikei.uj3z22w62c.svg.gz",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\rxfwnm0uqn-uj3z22w62c.gz",
+      "Route": "images/layered-steps-haikei.uj3z22w62c.svg.gz",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\zitk8ck37u-uj3z22w62c.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -16428,7 +16531,7 @@
         },
         {
           "Name": "label",
-          "Value": "img/layered-steps-haikei.svg.gz"
+          "Value": "images/layered-steps-haikei.svg.gz"
         },
         {
           "Name": "integrity",
@@ -16461,7 +16564,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16514,7 +16617,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16551,7 +16654,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16598,7 +16701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16651,7 +16754,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16688,7 +16791,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16735,7 +16838,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16796,7 +16899,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16841,7 +16944,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16896,7 +16999,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16957,7 +17060,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17002,7 +17105,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 25 Nov 2024 20:36:42 GMT"
+          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
         },
         {
           "Name": "Cache-Control",

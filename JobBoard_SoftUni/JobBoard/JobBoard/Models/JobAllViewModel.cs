@@ -6,7 +6,7 @@ namespace JobBoard.Models
     public class JobAllViewModel
     {
         [Required]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         [Required]
         [Display(Name = "Позиция")]
         public string? Title { get; set; }

@@ -5,7 +5,7 @@ namespace JobBoard.Models
     public class JobApplicationViewModel
     {
         [Required]
-        public int JobId { get; set; }
+        public Guid JobId { get; set; }
         [Required]
         [Display(Name = "Три имена")]
         public string ApplicantName { get; set; }

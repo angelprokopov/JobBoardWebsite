@@ -81,10 +81,11 @@ namespace JobBoard
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Error/Error500");
                 app.UseHsts();
             }
 
+            app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

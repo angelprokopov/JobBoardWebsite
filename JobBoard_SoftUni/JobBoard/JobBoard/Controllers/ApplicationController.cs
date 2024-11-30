@@ -1,5 +1,6 @@
 ﻿using JobBoard.Data;
 using JobBoard.Data.Models;
+using JobBoard.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,14 +11,16 @@ namespace JobBoard.Controllers
     public class ApplicationController : Controller
     {
         private readonly JobBoardContext _context;
-        public ApplicationController(JobBoardContext job)
+        private IRepository<Applications> @object;
+
+        public ApplicationController(IRepository<Applications> @object)
         {
-            _context = job;
+            this.@object = @object;
         }
 
         [Authorize(Roles = "Admin,Employer")]
         [HttpGet]
-        public async Task<IActionResult> List(int jobId)
+        public async Task<IActionResult> List(Guid jobId)
         {
             var applications = await _context.Applications
                 .Include(j => j.Job)
@@ -41,7 +44,7 @@ namespace JobBoard.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Apply(int jobId)
+        public async Task<IActionResult> Apply(Guid jobId)
         {
             var userId = User.FindFirst("UserId")?.Value;
             if (_context.Applications.Any(a=>a.JobId == jobId && a.UserId == Guid.Parse(userId)))

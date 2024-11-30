@@ -7,7 +7,7 @@ namespace JobBoard.Models
     public class JobFavoriteViewModel
     {
         [Required]
-        public int JobId { get; set; }
+        public Guid JobId { get; set; }
         [Required]
         [Display(Name = "Позиция")]
         public string Title { get; set; }

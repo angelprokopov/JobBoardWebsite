@@ -29,20 +29,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\android-chrome-512x512.png",
-      "PackagePath": "staticwebassets\\img\\android-chrome-512x512.png"
+      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\AdobeStock_753208233_Preview.jpeg",
+      "PackagePath": "staticwebassets\\images\\AdobeStock_753208233_Preview.jpeg"
     },
     {
-      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\favicon-32x32.png",
-      "PackagePath": "staticwebassets\\img\\favicon-32x32.png"
+      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\images\\android-chrome-512x512.png"
     },
     {
-      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\job-board-software.png",
-      "PackagePath": "staticwebassets\\img\\job-board-software.png"
+      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\images\\favicon-32x32.png"
     },
     {
-      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\img\\layered-steps-haikei.svg",
-      "PackagePath": "staticwebassets\\img\\layered-steps-haikei.svg"
+      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\job-board-software.png",
+      "PackagePath": "staticwebassets\\images\\job-board-software.png"
+    },
+    {
+      "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\images\\layered-steps-haikei.svg",
+      "PackagePath": "staticwebassets\\images\\layered-steps-haikei.svg"
     },
     {
       "Id": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\js\\site.js",

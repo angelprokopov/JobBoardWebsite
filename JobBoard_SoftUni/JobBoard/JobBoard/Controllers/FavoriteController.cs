@@ -1,5 +1,6 @@
 ﻿using JobBoard.Data;
 using JobBoard.Data.Models;
+using JobBoard.Interfaces;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +11,16 @@ using System.Security.Claims;
 
 namespace JobBoard.Controllers
 {
+    [Authorize]
     public class FavoriteController : Controller
     {
         private readonly JobBoardContext _context;
+        private IRepository<Favorite> @object;
+
+        public FavoriteController(IRepository<Favorite> @object, IRepository<Job> object1)
+        {
+            this.@object = @object;
+        }
 
         [Authorize]
         [HttpPost]
@@ -49,8 +57,9 @@ namespace JobBoard.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpPost]
-        public IActionResult RemoveFromFavorite(int jobId)
+        public IActionResult RemoveFromFavorite(Guid jobId)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             Guid userGuid = Guid.Parse(userId);
@@ -63,6 +72,34 @@ namespace JobBoard.Controllers
             }
 
             return RedirectToAction(nameof(Favorites));
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> AddToFavorites(Guid userId, Guid jobId)
+        {
+
+            var existingFavorites = (await @object.GetAllAsync())
+                .FirstOrDefault(f=>f.JobId == jobId && f.UserId == userId);
+
+            if (existingFavorites != null)
+            {
+                TempData[""] = "";
+                return RedirectToAction("", "");
+            }
+
+            var favorite = new Favorite
+            {
+                Id = new Guid(),
+                UserId = userId,
+                JobId = new Guid(),
+                
+            };
+
+            await @object.AddAsync(favorite);
+
+            TempData[""] = "";
+            return RedirectToAction("Index","Job");
         }
     }
 }

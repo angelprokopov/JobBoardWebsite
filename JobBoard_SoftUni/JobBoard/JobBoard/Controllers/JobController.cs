@@ -43,7 +43,7 @@ namespace JobBoard.Controllers
             return View(model);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(Guid id)
         {
             var jobs = _context.Jobs
                 .Where(j => j.Id == id)
@@ -57,13 +57,13 @@ namespace JobBoard.Controllers
                 }).FirstOrDefault();
 
             if (jobs == null)
-                return NotFound();
+                return View("Error404");
 
             return View(jobs);
         }
 
         [HttpPost]
-        public IActionResult Apply(int jobId, Guid userId, string coverLetter)
+        public IActionResult Apply(Guid jobId, Guid userId, string coverLetter)
         {
             var application = new Applications
             {

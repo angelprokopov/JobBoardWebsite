@@ -63,7 +63,7 @@ namespace JobBoard.Controllers
         {
             var company = await _context.Companies.FindAsync(id);
             if (company == null) 
-                return NotFound();
+                return View("Error404");
 
             return View(company);
         }
@@ -74,7 +74,7 @@ namespace JobBoard.Controllers
         {
             var company = await _context.Companies.FindAsync(id);
             if (company != null)
-                return NotFound();
+                return View("Error404");
 
             _context.Companies.Remove(company);
             await _context.SaveChangesAsync();

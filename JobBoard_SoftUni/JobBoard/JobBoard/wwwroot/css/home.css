@@ -1,21 +1,3 @@
-﻿.intro {
-    background-image: url('~/img/job-board-software.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+﻿.hero-section .overlay{
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
-
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-

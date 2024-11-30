@@ -59,7 +59,7 @@ namespace JobBoard.Controllers
             var document = await _context.Documents.FindAsync(id);
             if (document == null || document.UserId != Guid.Parse(User.FindFirst("UserId")?.Value))
             {
-                return NotFound();
+                return View("Error404");
             }
 
             var filePath = Path.Combine(_environment.WebRootPath,document.FilePath.TrimStart('/'));

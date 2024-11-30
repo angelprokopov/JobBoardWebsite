@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C0AAF19-35E4-49D9-A56F-3E8916C39E05}|JobBoard.Tests\\JobBoard.Tests.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard.tests\\jobcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C0AAF19-35E4-49D9-A56F-3E8916C39E05}|JobBoard.Tests\\JobBoard.Tests.csproj|solutionrelative:jobboard.tests\\jobcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Migrations\\20241130211917_InitialMigrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JobBoard\\Migrations\\20241130211917_InitialMigrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|c:\\users\\angel\\downloads\\jobboard_softuni\\jobboard\\jobboard\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{34EDA0E3-534F-45C2-A503-3FC28AEAE442}|JobBoard\\JobBoard.csproj|solutionrelative:jobboard\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,28 +54,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JobController.cs",
-              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Controllers\\JobController.cs",
-              "RelativeDocumentMoniker": "JobBoard\\Controllers\\JobController.cs",
-              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Controllers\\JobController.cs",
-              "RelativeToolTip": "JobBoard\\Controllers\\JobController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwCYAAAATAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20241130211917_InitialMigrate.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Migrations\\20241130211917_InitialMigrate.cs",
+              "RelativeDocumentMoniker": "JobBoard\\Migrations\\20241130211917_InitialMigrate.cs",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Migrations\\20241130211917_InitialMigrate.cs",
+              "RelativeToolTip": "JobBoard\\Migrations\\20241130211917_InitialMigrate.cs",
+              "ViewState": "AgIAAMgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T21:07:03.729Z",
+              "WhenOpened": "2024-11-30T21:19:18.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JobControllerTest.cs",
-              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard.Tests\\JobControllerTest.cs",
-              "RelativeDocumentMoniker": "JobBoard.Tests\\JobControllerTest.cs",
-              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard.Tests\\JobControllerTest.cs",
-              "RelativeToolTip": "JobBoard.Tests\\JobControllerTest.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAnwCcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T20:14:28.659Z",
+              "DocumentIndex": 2,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "JobBoard\\wwwroot\\css\\home.css",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "JobBoard\\wwwroot\\css\\home.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-30T20:39:42.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "JobBoard\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "JobBoard\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAkwDQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T20:30:01.429Z",
               "EditorCaption": ""
             }
           ]

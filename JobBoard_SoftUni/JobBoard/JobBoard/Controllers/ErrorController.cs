@@ -11,12 +11,18 @@ namespace JobBoard.Controllers
             switch(statusCode)
             {
                 case 404:
-                    return View("NotFound");
+                    return View("Error404");
                 case 500:
-                    return View("InternalServerError");
+                    return View("Error500");
                 default:
                     return View("GeneralError"); 
             }
+        }
+
+        [Microsoft.AspNetCore.Mvc.Route("Error/500")]
+        public IActionResult HandleServerError()
+        {
+            return View("Error500");
         }
     }
 }
