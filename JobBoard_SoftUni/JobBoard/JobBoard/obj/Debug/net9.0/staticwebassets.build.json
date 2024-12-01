@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KMdWKPHDceBG8ifIjtstWn4rQptF6F+c1ndTLF4vsjs=",
+  "Hash": "Yq+s3ryXdQfS8c4dnyKJmVzAZAUvdjkgl8tzRdJSMMw=",
   "Source": "JobBoard",
   "BasePath": "_content/JobBoard",
   "Mode": "Default",
@@ -1928,12 +1928,12 @@
       "OriginalItemSpec": "C:\\Users\\Angel\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\V5\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
+      "Identity": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-3mo3gylw03.gz",
       "SourceId": "JobBoard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/JobBoard",
-      "RelativePath": "css/home#[.{fingerprint=adki8dftcj}]?.css.gz",
+      "RelativePath": "css/home#[.{fingerprint=3mo3gylw03}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1942,8 +1942,8 @@
       "RelatedAsset": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ytf08wuslm",
-      "Integrity": "2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=",
+      "Fingerprint": "nztaue64li",
+      "Integrity": "U+zNj7MT4KAK9Te0fKRacEaYeWLJ1hTscggE68XG0/U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css"
@@ -4084,8 +4084,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "adki8dftcj",
-      "Integrity": "nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=",
+      "Fingerprint": "3mo3gylw03",
+      "Integrity": "pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
@@ -5521,13 +5521,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/home.adki8dftcj.css",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
+      "Route": "css/home.3mo3gylw03.css",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-3mo3gylw03.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.011494252874"
+          "Quality": "0.007042253521"
         }
       ],
       "ResponseHeaders": [
@@ -5537,15 +5537,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "86"
+          "Value": "141"
         },
         {
           "Name": "ETag",
-          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
+          "Value": "\"U+zNj7MT4KAK9Te0fKRacEaYeWLJ1hTscggE68XG0/U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+          "Value": "Sun, 01 Dec 2024 08:34:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5565,13 +5565,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
+          "Value": "W/\"pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "adki8dftcj"
+          "Value": "3mo3gylw03"
         },
         {
           "Name": "label",
@@ -5579,12 +5579,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
+          "Value": "sha256-pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ="
         }
       ]
     },
     {
-      "Route": "css/home.adki8dftcj.css",
+      "Route": "css/home.3mo3gylw03.css",
       "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\wwwroot\\css\\home.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5594,7 +5594,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "76"
+          "Value": "144"
         },
         {
           "Name": "Content-Type",
@@ -5602,11 +5602,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
+          "Value": "\"pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+          "Value": "Sun, 01 Dec 2024 08:34:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5616,7 +5616,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "adki8dftcj"
+          "Value": "3mo3gylw03"
         },
         {
           "Name": "label",
@@ -5624,13 +5624,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
+          "Value": "sha256-pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ="
         }
       ]
     },
     {
-      "Route": "css/home.adki8dftcj.css.gz",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
+      "Route": "css/home.3mo3gylw03.css.gz",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-3mo3gylw03.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5639,7 +5639,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "86"
+          "Value": "141"
         },
         {
           "Name": "Content-Type",
@@ -5647,11 +5647,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
+          "Value": "\"U+zNj7MT4KAK9Te0fKRacEaYeWLJ1hTscggE68XG0/U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+          "Value": "Sun, 01 Dec 2024 08:34:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5669,7 +5669,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "adki8dftcj"
+          "Value": "3mo3gylw03"
         },
         {
           "Name": "label",
@@ -5677,18 +5677,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4="
+          "Value": "sha256-U+zNj7MT4KAK9Te0fKRacEaYeWLJ1hTscggE68XG0/U="
         }
       ]
     },
     {
       "Route": "css/home.css",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-3mo3gylw03.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.011494252874"
+          "Quality": "0.007042253521"
         }
       ],
       "ResponseHeaders": [
@@ -5698,15 +5698,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "86"
+          "Value": "141"
         },
         {
           "Name": "ETag",
-          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
+          "Value": "\"U+zNj7MT4KAK9Te0fKRacEaYeWLJ1hTscggE68XG0/U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+          "Value": "Sun, 01 Dec 2024 08:34:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5726,13 +5726,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
+          "Value": "W/\"pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
+          "Value": "sha256-pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ="
         }
       ]
     },
@@ -5747,7 +5747,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "76"
+          "Value": "144"
         },
         {
           "Name": "Content-Type",
@@ -5755,11 +5755,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho=\""
+          "Value": "\"pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+          "Value": "Sun, 01 Dec 2024 08:34:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5769,13 +5769,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nsOLTMKEj/Q6Qt2/JRxq8tN6LQ1Y4FgheFIgEiaZVho="
+          "Value": "sha256-pTjpOkX4aiXTEmN9d4HAcbkvUF8wPtCMGADl/iH+rqQ="
         }
       ]
     },
     {
       "Route": "css/home.css.gz",
-      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-adki8dftcj.gz",
+      "AssetFile": "C:\\Users\\Angel\\Downloads\\JobBoard_SoftUni\\JobBoard\\JobBoard\\obj\\Debug\\net9.0\\compressed\\9xghahyask-3mo3gylw03.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5784,7 +5784,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "86"
+          "Value": "141"
         },
         {
           "Name": "Content-Type",
@@ -5792,11 +5792,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4=\""
+          "Value": "\"U+zNj7MT4KAK9Te0fKRacEaYeWLJ1hTscggE68XG0/U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 20:40:26 GMT"
+          "Value": "Sun, 01 Dec 2024 08:34:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5814,7 +5814,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2keO3OOFIiTstOtGUhRFwz6Fv1ZC+fe/MBlV/O7gtN4="
+          "Value": "sha256-U+zNj7MT4KAK9Te0fKRacEaYeWLJ1hTscggE68XG0/U="
         }
       ]
     },
@@ -16564,7 +16564,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16617,7 +16617,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16654,7 +16654,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16701,7 +16701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16754,7 +16754,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16791,7 +16791,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16838,7 +16838,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16899,7 +16899,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16944,7 +16944,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16999,7 +16999,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17060,7 +17060,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17105,7 +17105,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 30 Nov 2024 17:22:01 GMT"
+          "Value": "Sun, 01 Dec 2024 13:04:44 GMT"
         },
         {
           "Name": "Cache-Control",

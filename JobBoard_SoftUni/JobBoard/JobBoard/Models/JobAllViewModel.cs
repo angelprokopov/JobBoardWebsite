@@ -13,6 +13,7 @@ namespace JobBoard.Models
         [Required]
         [Display(Name = "Описание")]
         public string? Description { get; set; }
+        public decimal Salary { get; set; }
         [Required]
         [Display(Name = "Местоположение")]
         public string? Location { get; set; }

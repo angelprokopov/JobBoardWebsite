@@ -17,9 +17,9 @@ namespace JobBoard.Data.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Salary { get; set; }
         public DateTime PostDate { get; set; }
-        public int CompanyId { get; set; }
+        public Guid CompanyId { get; set; }
         public Company Company { get; set; }
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
         public JobCategory Category { get; set; }
         public ICollection<Applications> Applications { get; set; } = new List<Applications>();
         public ICollection<Favorite> Favorites { get; set;} = new List<Favorite>();

@@ -19,7 +19,6 @@ C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Castle.Core.dll
-C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Elasticsearch.Net.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\FluentAssertions.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Humanizer.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.Google.dll
@@ -78,7 +77,6 @@ C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Mono.TextTemplating.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Moq.dll
-C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Nest.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\NuGet.Common.dll
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard.Tests\bin\Debug\net9.0\NuGet.Configuration.dll

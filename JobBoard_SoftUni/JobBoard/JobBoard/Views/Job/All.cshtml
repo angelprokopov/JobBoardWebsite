@@ -7,38 +7,45 @@
     ViewData["Title"] = "Обяви за работа";
 }
 
+
 <div class="container mt-4">
-    <h2 class="text-center mb-3">Налични обяви за работа</h2>
-    <div class="row">
-        @foreach (var job in Model)
-        {
-            <div class="col-md-3">
-                <div class="card mb-3 shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">job.Title</h4>
-                        <p class="card-text">
-                            <strong>Фирма:</strong> @job.CompanyName
-                            <strong>Локация</strong> @job.Location
-                            <strong>Дата:</strong> @job.DatePosted.ToShortDateString()
+    <h2 class="text-center mb-4"></h2>
+</div>
+
+<!--Search section-->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <form method="get" class="d-flex justify-content-between">
+            <input type="text" class="form-control me-2" name="search" />
+            <button type="submit" class="btn btn-primary">Търсене</button>
+        </form>
+    </div>
+</div>
+
+<!--Job Listings-->
+<div class="row">
+    @foreach(var job in Model) 
+    {
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="card-body d-flex flex-wrap align-items-center">
+                    <!--Job Title-->
+                    <div class="col-md-8">
+                        <h4 class="card-title mb-2">
+                            <a href="" class="text-dark">@job.Title</a>
+                        </h4>
+                        <p class="mb-1 text-muted">@job.CompanyName - @job.Location</p>
+                        <p class="mb-0">
+                            <span class="text-primary">@job.Salary.ToString("C")</span> •
+                            Публикувана на: @job.DatePosted.ToString("dd/mm/yyyy")
                         </p>
-                        <a href="@Url.Action("Details","Job", new {id = job.Id})" class="btn btn-primary btn-sm">Детайли</a>
+                    </div>
+                    <!--Apply button-->
+                    <div class="col-md-4 text-end">
+                        <a href="" class="btn btn-outline-primary"></a>
                     </div>
                 </div>
             </div>
-        }
-    </div>
-
-    <div class="pagination">
-        @if (Model.HasPreviousPage)
-        {
-            <a asp-action="AllJobs" asp-route-page="@(Model.PageIndex - 1)">Предишна страница</a>
-        }
-
-        <span>Страница @Model.PageIndex от @Model.TotalPages</span>
-
-        @if(Model.HasNextPage) 
-        {
-            <a asp-action="AllJobs" asp-route-page="@(Model.PageIndex + 1)">Следваща страница</a>
-        }
-    </div>
+        </div>
+    }
 </div>

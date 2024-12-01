@@ -1,5 +1,6 @@
 ﻿using JobBoard.Data;
 using JobBoard.Data.Models;
+using JobBoard.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,18 +9,17 @@ namespace JobBoard.Controllers
 {
     public class CompanyController : Controller
     {
-        private readonly JobBoardContext _context;
-
-        public CompanyController(JobBoardContext context)
+        private readonly IRepository<Company> _companyRepository;
+        public CompanyController(IRepository<Company> companyRepository)
         {
-            _context = context;
+            _companyRepository = companyRepository;
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles ="Admin")]
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var companies = _context.Companies.ToListAsync();
+            var companies = await _companyRepository.GetAllAsync();
             return View(companies);
         }
 
@@ -28,30 +28,26 @@ namespace JobBoard.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Company company)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                _context.Companies.Add(company);
-                await _context.SaveChangesAsync();
+                await _companyRepository.AddAsync(company);
                 return RedirectToAction(nameof(Index));
             }
 
             return View(company);
         }
 
-        [Authorize(Roles="Admin,Employer")]
+        [Authorize(Roles = "Admin,Employer")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Company model)
+        public async Task<IActionResult> Edit(Guid id, Company model)
         {
             if (id != model.Id)
-            {
                 return BadRequest();
-            }
 
             if (ModelState.IsValid)
             {
-                _context.Update(model);
-                await _context.SaveChangesAsync();
+                await _companyRepository.UpdateAsync(model);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -59,10 +55,10 @@ namespace JobBoard.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(Guid id)
         {
-            var company = await _context.Companies.FindAsync(id);
-            if (company == null) 
+            var company = await _companyRepository.GetByIdAsync(id);
+            if (company == null)
                 return View("Error404");
 
             return View(company);
@@ -70,15 +66,13 @@ namespace JobBoard.Controllers
 
         [HttpPost]
         [Authorize(Roles ="Admin,Employer")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            var company = await _context.Companies.FindAsync(id);
-            if (company != null)
+            var compay = await _companyRepository.GetByIdAsync(id);
+            if (compay == null)
                 return View("Error404");
 
-            _context.Companies.Remove(company);
-            await _context.SaveChangesAsync();
-
+            await _companyRepository.DeleteAsync(compay);
             return RedirectToAction(nameof(Index));
         }
     }

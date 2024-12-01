@@ -72,10 +72,6 @@
               "target": "Package",
               "version": "[4.20.72, )"
             },
-            "NEST": {
-              "target": "Package",
-              "version": "[7.17.5, )"
-            },
             "System.Net.Http": {
               "target": "Package",
               "version": "[4.3.4, )"

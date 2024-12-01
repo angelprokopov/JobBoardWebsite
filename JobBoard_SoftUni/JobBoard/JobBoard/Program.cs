@@ -12,7 +12,7 @@ namespace JobBoard
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
             var config = builder.Configuration;
@@ -75,6 +75,9 @@ namespace JobBoard
 
             var app = builder.Build();
 
+            //Dynamically seeding the database
+            await SeedDatabaseAsync(app);
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseMigrationsEndPoint();
@@ -100,7 +103,69 @@ namespace JobBoard
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
 
-            app.Run();
+           await app.RunAsync();
+        }
+
+        private static async Task SeedDatabaseAsync(WebApplication app)
+        {
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<JobBoardContext>();
+
+                if (!context.JobCategories.Any())
+                {
+                    var categories = new[]
+                    {
+                        new JobCategory {Id =  Guid.NewGuid(), Name = "Финанси"},
+                        new JobCategory {Id = Guid.NewGuid(), Name = "IT" }
+                    };
+
+                    context.JobCategories.AddRange(categories);
+                    await context.SaveChangesAsync();
+                }
+
+                if (!context.Companies.Any())
+                {
+                    var companies = new[]
+                    {
+                        new Company {Id = Guid.NewGuid(),Name = "DXC Technology / DXC Bulgaria EOOD\r\n", Location = "София", Description = "DXC Technology is a Fortune 500 global IT services leader. Our more than 130,000 people in 70-plus countries are entrusted by our customers to deliver what matters most. "},
+                        new Company {Id = Guid.NewGuid(), Name = "myPOS Technologies EAD\r\n", Location = "Варна", Description = "myPOS is an international fintech company. Our team of 750+ people is located in 18 offices all over Europe. The company works in 30+ markets in the continent and has more than 200,000 business customers." }
+                    };
+
+                    context.Companies.AddRange(companies);
+                    await context.SaveChangesAsync();
+                }
+
+                if (context.Jobs.Any())
+                {
+                    var jobCategories = context.JobCategories.ToList();
+                    var companies = context.Companies.ToList();
+
+                    var jobs = new[]
+                    {
+                        new Job
+                        {
+                            Id = Guid.NewGuid(),
+                            Title = "Senior Network Infrastructure Specialist/ Remote/ Hybrid\r\n",
+                            Salary = 2600,
+                            PostDate = DateTime.Now,
+                            Location = "София",
+                            CompanyId = companies[0].Id,
+                            CategoryId = jobCategories[0].Id,
+                        },
+                        new Job
+                        {
+                            Id = Guid.NewGuid(),
+                            Title = "Senior C# (.NET) Developer\r\n",
+                            Salary = 2100,
+                            PostDate = DateTime.Now,
+                            Location = "София",
+                            CompanyId = companies[1].Id,
+                            CategoryId = jobCategories[1].Id,
+                        }
+                    };
+                }
+            }
         }
     }
 }

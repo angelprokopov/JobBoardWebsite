@@ -13,31 +13,27 @@ namespace JobBoard.Tests.Controllers
         [Fact]
         public async Task Index_ReturnsViewResult_WithAListOfJobs()
         {
-            var mockupRepo = new Mock<IRepository<Job>>();
-            mockupRepo.Setup(repo => repo.GetAllAsync())
-                .ReturnsAsync(new List<Job>
-                {
-                    new Job {Id = new Guid(), Title = ""},
-                    new Job {Id = new Guid(), Title = "" }
-                });
+            // Arrange
+            var mockupJobRepo = new Mock<IRepository<Job>>();
+            var mockupApplicationRepo = new Mock<IRepository<Applications>>();
 
-            var controller = new JobController(mockupRepo.Object);
+            // Mocking the GetAllAsync method to return a list of jobs
+            mockupJobRepo.Setup(repo => repo.GetAllAsync())
+             .ReturnsAsync(new List<Job>
+             {
+                new Job { Id = Guid.NewGuid(), Title = "Software Engineer" },
+                new Job { Id = Guid.NewGuid(), Title = "Data Analyst" }
+             });
 
+            var controller = new JobController(mockupJobRepo.Object, mockupApplicationRepo.Object);
+
+            // Act
             var result = await controller.All();
 
+            // Assert
             var viewResult = Assert.IsType<ViewResult>(result);
-            var model = Assert.IsAssignableFrom<IEnumerable<Job>>(viewResult.ViewData.Model);
-
-            Assert.Equal(1, model.Count());
-        }
-
-        private List<Job> GetTestJobs()
-        {
-            return new List<Job>
-            {
-                new Job {Id = new Guid(), Title = "" },
-                new Job {Id = new Guid(), Title = "" }
-            };
+            var model = Assert.IsAssignableFrom<IEnumerable<Job>>(viewResult.Model);    
+            Assert.Equal(1, model.Count()); 
         }
     }
 }

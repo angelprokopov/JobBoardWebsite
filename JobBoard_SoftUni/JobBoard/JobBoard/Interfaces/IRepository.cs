@@ -16,25 +16,25 @@ namespace JobBoard.Interfaces
 
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly JobBoardContext context;
+        private readonly JobBoardContext _context;
         private readonly DbSet<T> dbSet;
 
-        public Repository(JobBoardContext job)
+        public Repository(JobBoardContext context)
         {
-            job = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
             dbSet = context.Set<T>();
         }
 
         public async Task AddAsync(T entity)
         {
             await dbSet.AddAsync(entity);
-            await context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(T entity)
         {
              dbSet.Remove(entity);
-            await context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
         public async Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate) => await dbSet.AnyAsync(predicate);
@@ -46,7 +46,7 @@ namespace JobBoard.Interfaces
         public async Task UpdateAsync(T entity)
         {
             dbSet.Update(entity);
-            await context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
     }
 }
