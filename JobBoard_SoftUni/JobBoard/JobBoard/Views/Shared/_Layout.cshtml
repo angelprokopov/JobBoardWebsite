@@ -38,6 +38,13 @@
                             <li class="nav-item">
                                 <a class="" href="@Url.Action("Index","Application")">Кандидаствания</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="" href="@Url.Action("Index","Application")"></a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link">Добре дошли, @User.Identity.Name</span>
+                            </li>
+
                         }
                         @if (User.IsInRole("Admin"))
                         {

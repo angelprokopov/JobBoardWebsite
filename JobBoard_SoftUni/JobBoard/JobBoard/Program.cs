@@ -1,12 +1,10 @@
 using JobBoard.Data;
 using JobBoard.Data.Models;
 using JobBoard.Services;
-using JobBoard.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using static JobBoard.Areas.Identity.Pages.Account.RegisterModel;
+using JobBoard.Data.Interfaces;
 
 namespace JobBoard
 {
@@ -16,30 +14,30 @@ namespace JobBoard
         {
             var builder = WebApplication.CreateBuilder(args);
             var config = builder.Configuration;
-            
+
+            // Add services
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
-            
-            
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-           
+
+            // Configure DbContext
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                                   ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<JobBoardContext>(options =>
                 options.UseSqlServer(connectionString));
-            
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-
+            // Configure Identity
             builder.Services.AddIdentity<User, Role>(options =>
             {
                 options.Password.RequireDigit = true;
                 options.SignIn.RequireConfirmedAccount = true;
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(8); // The time that the user have before he's lockout
-                options.Lockout.MaxFailedAccessAttempts = 6; // Maximum attepts for entering the password
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(8);
+                options.Lockout.MaxFailedAccessAttempts = 6;
             })
-                 .AddRoles<Role>()
-                 .AddEntityFrameworkStores<JobBoardContext>()
-                 .AddDefaultTokenProviders();
-            
+            .AddRoles<Role>()
+            .AddEntityFrameworkStores<JobBoardContext>()
+            .AddDefaultTokenProviders();
+
+            // Add external authentication providers
             builder.Services.AddAuthentication()
                 .AddGoogle(options =>
                 {
@@ -47,35 +45,27 @@ namespace JobBoard
                     options.ClientSecret = config["Authentication:Google:ClientSecret"];
                 });
 
+            // Add authorization policies
             builder.Services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
             });
 
+            // Email sender and custom services
             builder.Services.AddTransient<IEmailSender, EmailSender>();
-
-            builder.WebHost.ConfigureKestrel(options =>
-            {
-                options.ListenLocalhost(5001, listenOptions =>
-                {
-                    listenOptions.UseHttps();
-                });
-            });
-
             builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
-
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+            // Configure authentication cookie
             builder.Services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Account/Login";
                 options.LogoutPath = "/Account/Logout";
             });
 
-
             var app = builder.Build();
 
-            //Dynamically seeding the database
+            // Seed the database
             await SeedDatabaseAsync(app);
 
             if (app.Environment.IsDevelopment())
@@ -89,13 +79,10 @@ namespace JobBoard
             }
 
             app.UseStatusCodePagesWithReExecute("/Error/{0}");
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
-            app.UseAuthentication();    
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
@@ -103,7 +90,7 @@ namespace JobBoard
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
 
-           await app.RunAsync();
+            await app.RunAsync();
         }
 
         private static async Task SeedDatabaseAsync(WebApplication app)
@@ -116,8 +103,8 @@ namespace JobBoard
                 {
                     var categories = new[]
                     {
-                        new JobCategory {Id =  Guid.NewGuid(), Name = "Финанси"},
-                        new JobCategory {Id = Guid.NewGuid(), Name = "IT" }
+                        new JobCategory {Id = Guid.NewGuid(), Name = "Finance"},
+                        new JobCategory {Id = Guid.NewGuid(), Name = "IT"}
                     };
 
                     context.JobCategories.AddRange(categories);
@@ -128,15 +115,15 @@ namespace JobBoard
                 {
                     var companies = new[]
                     {
-                        new Company {Id = Guid.NewGuid(),Name = "DXC Technology / DXC Bulgaria EOOD\r\n", Location = "София", Description = "DXC Technology is a Fortune 500 global IT services leader. Our more than 130,000 people in 70-plus countries are entrusted by our customers to deliver what matters most. "},
-                        new Company {Id = Guid.NewGuid(), Name = "myPOS Technologies EAD\r\n", Location = "Варна", Description = "myPOS is an international fintech company. Our team of 750+ people is located in 18 offices all over Europe. The company works in 30+ markets in the continent and has more than 200,000 business customers." }
+                        new Company {Id = Guid.NewGuid(), Name = "DXC Technology", Location = "Sofia", Description = "A leading tech company."},
+                        new Company {Id = Guid.NewGuid(), Name = "myPOS", Location = "Varna", Description = "Fintech solutions."}
                     };
 
                     context.Companies.AddRange(companies);
                     await context.SaveChangesAsync();
                 }
 
-                if (context.Jobs.Any())
+                if (!context.Jobs.Any())
                 {
                     var jobCategories = context.JobCategories.ToList();
                     var companies = context.Companies.ToList();
@@ -146,24 +133,31 @@ namespace JobBoard
                         new Job
                         {
                             Id = Guid.NewGuid(),
-                            Title = "Senior Network Infrastructure Specialist/ Remote/ Hybrid\r\n",
+                            Title = "Senior Network Specialist",
                             Salary = 2600,
                             PostDate = DateTime.Now,
-                            Location = "София",
+                            ExperienceLevel = "",
+                            EmploymentType = "Full-Time",
+                            Location = "Remote",
                             CompanyId = companies[0].Id,
                             CategoryId = jobCategories[0].Id,
                         },
                         new Job
                         {
                             Id = Guid.NewGuid(),
-                            Title = "Senior C# (.NET) Developer\r\n",
+                            Title = "Senior C# Developer",
                             Salary = 2100,
                             PostDate = DateTime.Now,
-                            Location = "София",
+                            ExperienceLevel = "",
+                            EmploymentType = "Full-Time",
+                            Location = "Sofia",
                             CompanyId = companies[1].Id,
                             CategoryId = jobCategories[1].Id,
                         }
                     };
+
+                    context.Jobs.AddRange(jobs);
+                    await context.SaveChangesAsync();
                 }
             }
         }

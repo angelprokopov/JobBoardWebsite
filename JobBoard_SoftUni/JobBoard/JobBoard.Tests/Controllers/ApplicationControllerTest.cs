@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JobBoard.Interfaces;
 using JobBoard.Data.Models;
 using JobBoard.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using JobBoard.Data.Interfaces;
 
 namespace JobBoard.Tests.Controllers
 {
@@ -18,8 +18,9 @@ namespace JobBoard.Tests.Controllers
         public async Task Apply_ValidJobAndUser_ReturnsRedirectToAction()
         {
             var jobId = new Guid();
-            var mockupRepo = new Mock<IRepository<Applications>>();
-            var controller = new ApplicationController(mockupRepo.Object);
+            var mockupApplicationRepo = new Mock<IRepository<Applications>>();
+            var mockupJobRepo = new Mock<IRepository<Job>>();
+            var controller = new ApplicationController(mockupApplicationRepo.Object, mockupJobRepo.Object);
 
             var testApplication = new Applications
             {

@@ -3,7 +3,7 @@ using JobBoard.Controllers;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using JobBoard.Interfaces;
+using JobBoard.Data.Interfaces;
 
 
 namespace JobBoard.Tests.Controllers
@@ -28,7 +28,7 @@ namespace JobBoard.Tests.Controllers
             var controller = new JobController(mockupJobRepo.Object, mockupApplicationRepo.Object);
 
             // Act
-            var result = await controller.All();
+            var result = await controller.All("Engineer",1,10);
 
             // Assert
             var viewResult = Assert.IsType<ViewResult>(result);

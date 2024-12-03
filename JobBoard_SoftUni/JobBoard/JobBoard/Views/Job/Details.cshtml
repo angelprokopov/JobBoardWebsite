@@ -1,1 +1,61 @@
-﻿
+﻿@model JobBoard.Models.JobDetailsViewModel
+
+@{
+    ViewData["Title"] = "Job Details";
+}
+
+<div class="container mt-4">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2 class="fw-bold">@Model.Title</h2>
+            <p class="text-muted mb-1">
+                <span class="me-2">@Model.CompanyName</span> |
+                <span class="me-2">@Model.Location</span> |
+                <span class="text-success fw-bold">@Model.Salary.ToString("C")</span>
+            </p>
+            <p class="text-muted">Posted on: @Model.PostDate.ToString("MMMM dd, yyyy")</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+        <!-- Job Description -->
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Job Description</h5>
+                    <p class="card-text">@Model.Description</p>
+                </div>
+            </div>
+
+            <!-- Job Details -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Job Details</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Category:</strong> @Model.Category</li>
+                        <li><strong>Employment Type:</strong> @Model.EmploymentType</li>
+                        <li><strong>Experience Level:</strong> @Model.ExperienceLevel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Company Info</h5>
+                    <p class="mb-1"><strong>@Model.CompanyName</strong></p>
+                    <p class="text-muted">@Model.CompanyDescription</p>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2">
+                <a asp-controller="Application" asp-action="Apply" asp-route-jobId="@Model.JobId" class="btn btn-primary">Apply Now</a>
+                <button class="btn btn-outline-secondary">Save Job</button>
+            </div>
+        </div>
+    </div>
+</div>

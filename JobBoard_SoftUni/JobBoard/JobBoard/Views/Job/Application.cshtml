@@ -2,7 +2,7 @@
 <link href="~/css/jobs.css" rel="stylesheet" />
 
 <div class="container">
-    <form asp-action="Apply" asp-controller="Application" method="post" enctype="multipart/form-data">
+    <form asp-action="Apply" asp-controller="Application" asp-route-jobId="@Model.JobId" method="post" enctype="multipart/form-data">
         <div class="">
             <label class="">Име</label>
             <input type="text" class="" placeholder="Име" required />

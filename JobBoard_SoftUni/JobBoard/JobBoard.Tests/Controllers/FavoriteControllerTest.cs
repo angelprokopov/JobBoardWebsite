@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JobBoard.Interfaces;
 using JobBoard.Data.Models;
 using JobBoard.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using JobBoard.Data.Interfaces;
 
 namespace JobBoard.Tests.Controllers
 {

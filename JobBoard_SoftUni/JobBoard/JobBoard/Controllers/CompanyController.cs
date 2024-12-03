@@ -1,6 +1,6 @@
 ﻿using JobBoard.Data;
+using JobBoard.Data.Interfaces;
 using JobBoard.Data.Models;
-using JobBoard.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -68,11 +68,11 @@ namespace JobBoard.Controllers
         [Authorize(Roles ="Admin,Employer")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var compay = await _companyRepository.GetByIdAsync(id);
-            if (compay == null)
+            var company = await _companyRepository.GetByIdAsync(id);
+            if (company == null)
                 return View("Error404");
 
-            await _companyRepository.DeleteAsync(compay);
+            await _companyRepository.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }

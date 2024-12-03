@@ -1,6 +1,6 @@
 ﻿using JobBoard.Data;
+using JobBoard.Data.Interfaces;
 using JobBoard.Data.Models;
-using JobBoard.Interfaces;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -45,6 +45,31 @@ namespace JobBoard.Controllers
                 })
                 .ToList();
             var model = new PaginatedList<JobAllViewModel>(jobs,total,page,pageSize);
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var job = await _jobRepo.GetByIdAsync(id, j => j.Category, j => j.Company);
+            if (job == null)
+                return View("Error/Error404");
+
+            var model = new JobDetailsViewModel
+            {
+                JobId = job.Id,
+                Title = job.Title,
+                Description = job.Description,
+                Salary = job.Salary,
+                Location = job.Location,
+                PostDate = job.PostDate,
+                Category = job.Category.Name ?? "N/A",
+                EmploymentType = job.EmploymentType ?? "N/A",
+                ExperienceLevel = job.ExperienceLevel ?? "N/A",
+                CompanyName = job.Company.Name ?? "N/A",
+                CompanyDescription = job.Company.Description ?? "N/A",
+            };
+
             return View(model);
         }
     }

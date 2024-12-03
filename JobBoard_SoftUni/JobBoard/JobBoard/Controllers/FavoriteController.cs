@@ -1,6 +1,6 @@
 ﻿using JobBoard.Data;
+using JobBoard.Data.Interfaces;
 using JobBoard.Data.Models;
-using JobBoard.Interfaces;
 using JobBoard.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
