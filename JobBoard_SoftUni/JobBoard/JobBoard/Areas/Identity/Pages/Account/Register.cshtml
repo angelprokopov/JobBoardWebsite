@@ -29,7 +29,7 @@
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <a asp-action="Login" class="text-decoration-none">Имате вече акаунт? Влезте в профила си</a>
+                <a asp-area="Identity" asp-page="/Account/Login" class="text-decoration-none">Имате вече акаунт? Влезте в профила си</a>
                 <button type="submit" class="btn btn-primary px-4">Регистрация</button>
             </div>
         </form>

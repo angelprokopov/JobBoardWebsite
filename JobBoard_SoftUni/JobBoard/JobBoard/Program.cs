@@ -25,6 +25,10 @@ namespace JobBoard
             builder.Services.AddDbContext<JobBoardContext>(options =>
                 options.UseSqlServer(connectionString));
 
+            // builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<JobBoardContext>();
+
+           // builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<JobBoardContext>();
+
             // Configure Identity
             builder.Services.AddIdentity<User, Role>(options =>
             {
@@ -59,8 +63,11 @@ namespace JobBoard
             // Configure authentication cookie
             builder.Services.ConfigureApplicationCookie(options =>
             {
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromDays(14);
                 options.LoginPath = "/Account/Login";
                 options.LogoutPath = "/Account/Logout";
+                options.SlidingExpiration = true;
             });
 
             var app = builder.Build();
