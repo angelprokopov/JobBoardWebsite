@@ -24,7 +24,7 @@ namespace JobBoard.Controllers
         [Authorize(Roles = "Admin, Employer")]
         public async Task<IActionResult> List()
         {
-            var applications = await _applicationRepo.GetAllAsync(a => a.Job, a => a.User);
+            var applications = await _applicationRepo.GetAllAsync(filter:null, a=>a.Job, a=>a.User);
             var model = applications.Select(a => new JobApplicationViewModel
             {
                 JobId = a.Job.Id,

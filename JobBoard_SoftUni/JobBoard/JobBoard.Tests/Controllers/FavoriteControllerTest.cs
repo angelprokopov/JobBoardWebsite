@@ -10,6 +10,8 @@ using JobBoard.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using JobBoard.Data.Interfaces;
+using System.Linq.Expressions;
+using System.Security.Claims;
 
 namespace JobBoard.Tests.Controllers
 {
@@ -24,22 +26,35 @@ namespace JobBoard.Tests.Controllers
             var mockupFavoriteRepo = new Mock<IRepository<Favorite>>();
             var mockupJobRepo = new Mock<IRepository<Job>>();
 
-            mockupFavoriteRepo.Setup(repo => repo.GetAllAsync())
-                .ReturnsAsync(new List<Favorite>().AsQueryable());
+            mockupFavoriteRepo.Setup(repo => repo.GetAllAsync(
+                It.IsAny<Expression<Func<Favorite, bool>>>(),
+                It.IsAny<Expression<Func<Favorite, object>>[]>()
+            ))
+            .ReturnsAsync(new List<Favorite>());
 
-            var controller = new FavoriteController(mockupFavoriteRepo.Object,  mockupJobRepo.Object);
+            mockupJobRepo.Setup(repo => repo.GetByIdAsync(jobId))
+        .ReturnsAsync(new Job { Id = jobId, Title = "Test Job" });
 
+            // Set up the controller with the mock repositories
+            var controller = new FavoriteController(mockupFavoriteRepo.Object, mockupJobRepo.Object);
+
+            // Create a claims principal representing the logged-in user
             var user = new System.Security.Claims.ClaimsPrincipal(new System.Security.Claims.ClaimsIdentity(new[]
             {
-                new System.Security.Claims.Claim("UserId", userId.ToString())
+                new System.Security.Claims.Claim(ClaimTypes.NameIdentifier, userId.ToString())
             }));
 
             controller.ControllerContext = new ControllerContext
             {
-                HttpContext = new DefaultHttpContext { User =  user }   
+                HttpContext = new DefaultHttpContext { User = user }
             };
 
-            var result = await controller.AddToFavorites(jobId, userId);
+            // Act
+            var result = await controller.AddToFavorites(jobId);
+
+            // Assert
+            var redirectResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Index", redirectResult.ActionName);
         }
     }
 }

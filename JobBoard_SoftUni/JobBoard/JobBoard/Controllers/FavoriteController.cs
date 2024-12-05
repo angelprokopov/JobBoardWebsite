@@ -14,92 +14,59 @@ namespace JobBoard.Controllers
     [Authorize]
     public class FavoriteController : Controller
     {
-        private readonly JobBoardContext _context;
-        private IRepository<Favorite> @object;
+       private readonly IRepository<Favorite> _favoriteRepository;
+       private readonly IRepository<Job> _jobRepository;
 
-        public FavoriteController(IRepository<Favorite> @object, IRepository<Job> object1)
+       public FavoriteController(IRepository<Favorite> favoriteRepository, IRepository<Job> jobRepository)
+       {
+            _favoriteRepository = favoriteRepository;
+            _jobRepository = jobRepository;
+       }
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            this.@object = @object;
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) 
+                return Unauthorized();
+
+            if (!Guid.TryParse(userId, out var id))
+                return BadRequest("");
+
+            var favoriteJob = await _favoriteRepository.GetAllAsync(filter:f=>f.UserId == id, includeProperties: f=>f.Job);
+
+            return View(favoriteJob);
         }
 
-        [Authorize]
         [HttpPost]
-        public IActionResult Favorites(int page = 1, int pageSize = 10)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddToFavorites(Guid jobId)
         {
-            
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            Guid userGuid = Guid.Parse(userId);
-            var favoriteJobs = _context.Favorites
-                .Where(f => f.UserId == userGuid)
-                .Include(f => f.Job)
-                .OrderByDescending(f => f.Job);
-                
-            int totalFav = favoriteJobs.Count();
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
 
-            var favJobs = favoriteJobs
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .Select(f => new JobFavoriteViewModel
+            if (!Guid.TryParse(userId, out var id))
+                return BadRequest("");
+
+            var job = await _jobRepository.GetByIdAsync(jobId);
+            if (job == null)
+                return NotFound();
+
+            var existingFavorite = await _favoriteRepository.GetFirstOrDefaultAsync(f=>f.UserId == id && f.JobId == jobId);
+            if (existingFavorite == null)
+            {
+                var favorite = new Favorite
                 {
-                    JobId = f.JobId,
-                    Title = f.Job.Title,
-                    Location = f.Job.Location,
-                    PostedDate = f.Job.PostDate,
+                    Id = Guid.NewGuid(),
+                    UserId = id,
+                    JobId = jobId,
+                };
 
-                })
-                .ToList();
-            var model = new FavoriteViewModel
-            {
-                FavoriteJobs = favJobs,
-                PageIndex = page,
-                TotalPages = (int)Math.Ceiling(totalFav / (double)pageSize),
-            };
-            return View(model);
-        }
-
-        [Authorize]
-        [HttpPost]
-        public IActionResult RemoveFromFavorite(Guid jobId)
-        {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            Guid userGuid = Guid.Parse(userId);
-            var favorite = _context.Favorites.FirstOrDefault(f => f.JobId == jobId && f.UserId == userGuid);
-           
-            if (favorite != null)
-            {
-                _context.Favorites.Remove(favorite);
-                _context.SaveChanges();
+                await _favoriteRepository.AddAsync(favorite);
             }
 
-            return RedirectToAction(nameof(Favorites));
-        }
-
-        [Authorize]
-        [HttpPost]
-        public async Task<IActionResult> AddToFavorites(Guid userId, Guid jobId)
-        {
-
-            var existingFavorites = (await @object.GetAllAsync())
-                .FirstOrDefault(f=>f.JobId == jobId && f.UserId == userId);
-
-            if (existingFavorites != null)
-            {
-                TempData[""] = "";
-                return RedirectToAction("", "");
-            }
-
-            var favorite = new Favorite
-            {
-                Id = new Guid(),
-                UserId = userId,
-                JobId = new Guid(),
-                
-            };
-
-            await @object.AddAsync(favorite);
-
-            TempData[""] = "";
-            return RedirectToAction("Index","Job");
+            return RedirectToAction("Details", "Job", new { id = jobId });
         }
     }
 }

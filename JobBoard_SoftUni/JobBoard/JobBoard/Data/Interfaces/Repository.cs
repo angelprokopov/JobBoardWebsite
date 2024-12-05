@@ -14,37 +14,36 @@ namespace JobBoard.Data.Interfaces
             _dbSet = _context.Set<TEntity>();
         }
 
-        public async Task<TEntity> GetByIdAsync(Guid id, params Expression<Func<TEntity, object>>[] includes)
+        public async Task<TEntity> GetByIdAsync(Guid id, params Expression<Func<TEntity, object>>[] includeProperties)
         {
             IQueryable<TEntity> query = _dbSet;
 
-            foreach (var include in includes)
+            foreach (var includeProperty in includeProperties)
             {
-                query = query.Include(include);
+                query = query.Include(includeProperty);
             }
 
             return await query.FirstOrDefaultAsync(e => EF.Property<Guid>(e, "Id") == id);
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync(params Expression<Func<TEntity, object>>[] includes)
+
+        public async Task<TEntity> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> filter)
+        {
+            return await _dbSet.FirstOrDefaultAsync(filter);
+        }
+
+        public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter = null, params Expression<Func<TEntity, object>>[] includeProperties)
         {
             IQueryable<TEntity> query = _dbSet;
 
-            foreach (var include in includes)
+            if (filter != null)
             {
-                query = query.Include(include);
+                query = query.Where(filter);
             }
 
-            return await query.ToListAsync();
-        }
-
-        public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes)
-        {
-            IQueryable<TEntity> query = _dbSet.Where(predicate);
-
-            foreach (var include in includes)
+            foreach (var includeProperty in includeProperties)
             {
-                query = query.Include(include);
+                query = query.Include(includeProperty);
             }
 
             return await query.ToListAsync();
@@ -62,14 +61,10 @@ namespace JobBoard.Data.Interfaces
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task RemoveAsync(TEntity entity)
         {
-            var entity = await GetByIdAsync(id);
-            if (entity != null)
-            {
-                _dbSet.Remove(entity);
-                await _context.SaveChangesAsync();
-            }
+            _dbSet.Remove(entity);
+            await _context.SaveChangesAsync();
         }
     }
 }

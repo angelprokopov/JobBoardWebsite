@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,16 +25,16 @@
                             <span class="nav-link">Welcome, @User.Identity.Name!</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
+                            <a class="nav-link" asp-controller="Account" asp-action="Logout">Изход</a>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Вход</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Регистрация</a>
                         </li>
                     }
                 </ul>

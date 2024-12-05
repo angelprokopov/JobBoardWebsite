@@ -72,7 +72,7 @@ namespace JobBoard.Controllers
             if (company == null)
                 return View("Error404");
 
-            await _companyRepository.DeleteAsync(id);
+            await _companyRepository.RemoveAsync(company);
             return RedirectToAction(nameof(Index));
         }
     }

@@ -59,7 +59,7 @@ namespace JobBoard.Controllers
             {
                 JobId = job.Id,
                 Title = job.Title,
-                Description = job.Description,
+                Description = job.Description,  
                 Salary = job.Salary,
                 Location = job.Location,
                 PostDate = job.PostDate,

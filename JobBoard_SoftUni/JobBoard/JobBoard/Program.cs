@@ -70,7 +70,22 @@ namespace JobBoard
                 options.SlidingExpiration = true;
             });
 
+            builder.Services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[] {new System.Globalization.CultureInfo("bg-BG")};
+                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("bg-BG");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
             var app = builder.Build();
+
+            var localizationOptions = new RequestLocalizationOptions()
+                .SetDefaultCulture("bg-BG")
+                .AddSupportedCultures("bg-BG")
+                .AddSupportedUICultures("bg-BG");
+
+            app.UseRequestLocalization(localizationOptions);
 
             // Seed the database
             await SeedDatabaseAsync(app);
@@ -86,6 +101,13 @@ namespace JobBoard
             }
 
             app.UseStatusCodePagesWithReExecute("/Error/{0}");
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.ContentType = "text/html; charset=utf-8";
+                await next();
+            });
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
@@ -110,8 +132,12 @@ namespace JobBoard
                 {
                     var categories = new[]
                     {
-                        new JobCategory {Id = Guid.NewGuid(), Name = "Finance"},
-                        new JobCategory {Id = Guid.NewGuid(), Name = "IT"}
+                        new JobCategory {Id = Guid.NewGuid(), Name = "Финанси"},
+                        new JobCategory {Id = Guid.NewGuid(), Name = "IT"},
+                        new JobCategory {Id = Guid.NewGuid(), Name = "Инженери и техници"},
+                        new JobCategory {Id = Guid.NewGuid(), Name = "Счетоводство, одит, финанси"},
+                        new JobCategory {Id = Guid.NewGuid(), Name = "Шофьори, куриери"},
+                        new JobCategory {Id = Guid.NewGuid(), Name = "Право, юридически услуги"}
                     };
 
                     context.JobCategories.AddRange(categories);
@@ -143,9 +169,9 @@ namespace JobBoard
                             Title = "Senior Network Specialist",
                             Salary = 2600,
                             PostDate = DateTime.Now,
-                            ExperienceLevel = "",
-                            EmploymentType = "Full-Time",
-                            Location = "Remote",
+                            ExperienceLevel = "Junior",
+                            EmploymentType = "Напълно работно време",
+                            Location = "Дистанционна работа",
                             CompanyId = companies[0].Id,
                             CategoryId = jobCategories[0].Id,
                         },
@@ -156,8 +182,8 @@ namespace JobBoard
                             Salary = 2100,
                             PostDate = DateTime.Now,
                             ExperienceLevel = "",
-                            EmploymentType = "Full-Time",
-                            Location = "Sofia",
+                            EmploymentType = "Напълно работно време",
+                            Location = "София",
                             CompanyId = companies[1].Id,
                             CategoryId = jobCategories[1].Id,
                         }
