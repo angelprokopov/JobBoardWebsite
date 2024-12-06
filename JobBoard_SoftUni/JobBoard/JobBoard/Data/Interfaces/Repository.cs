@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JobBoard.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace JobBoard.Data.Interfaces
@@ -65,6 +66,11 @@ namespace JobBoard.Data.Interfaces
         {
             _dbSet.Remove(entity);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<JobCategory>> GetJobCategoriesAsync()
+        {
+            return await _context.JobCategories.ToListAsync();
         }
     }
 }

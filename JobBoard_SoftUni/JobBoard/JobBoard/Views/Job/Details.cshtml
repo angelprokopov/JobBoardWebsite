@@ -4,61 +4,67 @@
     ViewData["Title"] = "Job Details";
 }
 
-<div class="container mt-4">
-    <!-- Header -->
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <h2 class="fw-bold">@Model.Title</h2>
-            <p class="text-muted mb-1">
-                <span class="me-2">@Model.CompanyName</span> |
-                <span class="me-2">@Model.Location</span> |
-                <span class="text-success fw-bold">@Model.Salary.ToString("N2")лв</span>
-            </p>
-            <p class="text-muted">Posted on: @Model.PostDate.ToString("dd.mm.yyyy")</p>
-        </div>
-    </div>
+<div class="job-details container mt-4">
+    <h1 class="job-title">@Model.Title</h1>
+    <p class="text-muted">@Model.CompanyName - @Model.Location</p>
+    <p><strong>Публикувана на: </strong>@Model.PostDate.ToString("dd.MM.yyyy")</p>
+    <p><strong>Заплата: </strong>@String.Format("{0:N2} лв.", Model.Salary)</p>
+    <p><strong>Вид заетост: </strong>@Model.EmploymentType</p>
+    <p><strong>Ниво на опит: </strong>@Model.ExperienceLevel</p>
 
-    <!-- Main Content -->
-    <div class="row">
-        <!-- Job Description -->
-        <div class="col-md-8">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Job Description</h5>
-                    <p class="card-text">@Model.Description</p>
-                </div>
-            </div>
+    <hr />
 
-            <!-- Job Details -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Job Details</h5>
-                    <ul class="list-unstyled">
-                        <li><strong>Category:</strong> @Model.Category</li>
-                        <li><strong>Employment Type:</strong> @Model.EmploymentType</li>
-                        <li><strong>Experience Level:</strong> @Model.ExperienceLevel</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <h3 class="mt-4">Описание</h3>
+    <p>@Model.Description</p>
 
-        <!-- Sidebar -->
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Company Info</h5>
-                    <p class="mb-1"><strong>@Model.CompanyName</strong></p>
-                    <p class="text-muted">@Model.CompanyDescription</p>
-                </div>
-            </div>
+    @if (!string.IsNullOrEmpty(Model.Responsibilities))
+    {
+        <h4 class="mt-4">Отговорности:</h4>
+        <ul class="list-group list-group-flush">
+            @{
+                var responsibilities = Model.Responsibilities.Split("\n");
+                foreach (var responsibility in responsibilities)
+                {
+                    <li class="list-group-item">@responsibility</li>
+                }
+            }
+        </ul>
+    }
 
-            <div class="d-grid gap-2">
-                <a asp-controller="Application" asp-action="Apply" asp-route-jobId="@Model.JobId" class="btn btn-primary">Apply Now</a>
-                <form asp-action="AddToFavorites" asp-controller="Favorite" method="post">
+    @if (!string.IsNullOrEmpty(Model.Requirements))
+    {
+        <h4 class="mt-4">Изисквания:</h4>
+        <ul class="list-group list-group-flush">
+            @{
+                var requirements = Model.Requirements.Split("\n");
+                foreach (var requirement in requirements)
+                {
+                    <li class="list-group-item">@requirement</li>
+                }
+            }
+        </ul>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.Benefits))
+    {
+        <h4 class="mt-4">Предимства:</h4>
+        <ul class="list-group list-group-flush">
+            @{
+                var benefits = Model.Benefits.Split("\n");
+                foreach (var benefit in benefits)
+                {
+                    <li class="list-group-item">@benefit</li>
+                }
+            }
+        </ul>
+    }
+
+    <hr />
+
+     <div class="d-grid gap-2">
+         <a asp-controller="Application" asp-action="Apply" asp-route-jobId="@Model.JobId" class="btn btn-primary">Apply Now</a>
+         <form asp-action="AddToFavorites" asp-controller="Favorite" method="post">
                     <input type="hidden" name="jobId" value="@Model.JobId" />
                     <button type="submit" class="btn btn-outline-secondary">Save Job</button>
                 </form>
-            </div>
-        </div>
-    </div>
-</div>
+     </div>

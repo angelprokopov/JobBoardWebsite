@@ -12,12 +12,21 @@ namespace JobBoard.Data.Models
         [Required]
         public string Description { get; set; } = string.Empty ;
         [Required]
+        public string Responsibilities {  get; set; }
+        [Required]
+        public string Requirements { get; set; }
+        [Required]
+        public string Benefits { get; set; }
+        [Required]
         public string Location {  get; set; } = string.Empty ;
         [Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Salary { get; set; }
+        [Required]
         public DateTime PostDate { get; set; }
+        [Required]
         public string ExperienceLevel { get; set; }
+        [Required]
         public string EmploymentType { get; set; }
         public Guid CompanyId { get; set; }
         public Company Company { get; set; }

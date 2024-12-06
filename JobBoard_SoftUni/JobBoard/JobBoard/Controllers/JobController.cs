@@ -19,32 +19,30 @@ namespace JobBoard.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> All(string search,int page = 1, int pageSize = 10)
+        public async Task<IActionResult> All(string search, string category, int pageNumber = 1, int pageSize = 10)
         {
-            var jobQuery = await _jobRepo.GetAllAsync();
-            var jobOrdered = jobQuery.OrderByDescending(x => x.PostDate);
+            var jobsList = await _jobRepo.GetAllAsync();
+            IQueryable<Job> jobsQuery = jobsList.AsQueryable();
 
-            int total = jobOrdered.Count();
-            
-            if(!string.IsNullOrWhiteSpace(search))
+            if (!string.IsNullOrWhiteSpace(search)) 
+                jobsQuery = jobsQuery.Where(j=>j.Title.Contains(search) || j.Description.Contains(search));
+
+            if (!string.IsNullOrWhiteSpace(category))
+                jobsQuery = jobsQuery.Where(j => j.Category.Name == category);
+
+            int totalJobs = jobsQuery.Count();
+            var jobs = jobsQuery.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
+            var model = new JobListViewModel
             {
-                jobQuery = jobQuery.Where(j=>j.Title.Contains(search, StringComparison.OrdinalIgnoreCase)
-                    || j.Location.Contains(search, StringComparison.OrdinalIgnoreCase));
-            }
+                Jobs = jobs,
+                CurrentPage = pageNumber,
+                TotalPages = (int)Math.Ceiling(totalJobs / (double) pageSize),
+                SearchTerm = search,
+                SelectedCategory = category,
+                Categories = await _jobRepo.GetJobCategoriesAsync()
+            };
 
-            var jobs = jobOrdered
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .Select(j => new JobAllViewModel
-                {
-                    Id = j.Id,
-                    Title = j.Title,
-                    Location = j.Location,
-                    Description = j.Description,
-                    DatePosted = j.PostDate,
-                })
-                .ToList();
-            var model = new PaginatedList<JobAllViewModel>(jobs,total,page,pageSize);
             return View(model);
         }
 
@@ -59,7 +57,10 @@ namespace JobBoard.Controllers
             {
                 JobId = job.Id,
                 Title = job.Title,
-                Description = job.Description,  
+                Description = job.Description,
+                Responsibilities = job.Responsibilities,
+                Requirements = job.Requirements,
+                Benefits = job.Benefits,
                 Salary = job.Salary,
                 Location = job.Location,
                 PostDate = job.PostDate,

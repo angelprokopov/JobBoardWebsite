@@ -169,6 +169,10 @@ namespace JobBoard.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
@@ -193,6 +197,14 @@ namespace JobBoard.Migrations
 
                     b.Property<DateTime>("PostDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Requirements")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Responsibilities")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Salary")
                         .HasColumnType("decimal(18,2)");

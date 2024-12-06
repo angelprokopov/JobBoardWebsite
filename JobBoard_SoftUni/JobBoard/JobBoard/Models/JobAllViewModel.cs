@@ -21,14 +21,5 @@ namespace JobBoard.Models
         [Display(Name = "Име на компанията")]
         public string? CompanyName { get; set; }
         public DateTime DatePosted { get; set; }
-
-        public List<JobCategory> Categories { get; set; }
-        public List<Job> Jobs { get; set; }
-        public Guid SelectedJobId { get; set; }
-    }
-
-    public class JobAllPaginatedViewModel
-    {
-        public PaginatedList<JobAllViewModel> PaginatedList { get; set; }
     }
 }

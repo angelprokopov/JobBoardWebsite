@@ -128,71 +128,138 @@ namespace JobBoard
             {
                 var context = scope.ServiceProvider.GetRequiredService<JobBoardContext>();
 
-                if (!context.JobCategories.Any())
+                if (!await context.Database.CanConnectAsync())
                 {
-                    var categories = new[]
-                    {
-                        new JobCategory {Id = Guid.NewGuid(), Name = "Финанси"},
-                        new JobCategory {Id = Guid.NewGuid(), Name = "IT"},
-                        new JobCategory {Id = Guid.NewGuid(), Name = "Инженери и техници"},
-                        new JobCategory {Id = Guid.NewGuid(), Name = "Счетоводство, одит, финанси"},
-                        new JobCategory {Id = Guid.NewGuid(), Name = "Шофьори, куриери"},
-                        new JobCategory {Id = Guid.NewGuid(), Name = "Право, юридически услуги"}
-                    };
-
-                    context.JobCategories.AddRange(categories);
-                    await context.SaveChangesAsync();
+                    Console.WriteLine("Unable to connect to the database.");
+                    return;
                 }
 
-                if (!context.Companies.Any())
+                try
                 {
-                    var companies = new[]
-                    {
-                        new Company {Id = Guid.NewGuid(), Name = "DXC Technology", Location = "Sofia", Description = "A leading tech company."},
-                        new Company {Id = Guid.NewGuid(), Name = "myPOS", Location = "Varna", Description = "Fintech solutions."}
-                    };
+                    Random rnd = new Random();
 
-                    context.Companies.AddRange(companies);
+                    // Deleting existing records to reseed database (optional)
+                    context.Jobs.RemoveRange(context.Jobs);
+                    context.Companies.RemoveRange(context.Companies);
+                    context.JobCategories.RemoveRange(context.JobCategories);
                     await context.SaveChangesAsync();
-                }
 
-                if (!context.Jobs.Any())
-                {
-                    var jobCategories = context.JobCategories.ToList();
-                    var companies = context.Companies.ToList();
+                    Console.WriteLine("Old records deleted.");
 
-                    var jobs = new[]
+                    // Seed Job Categories
+                    if (!context.JobCategories.Any())
                     {
-                        new Job
+                        var categories = new[]
                         {
-                            Id = Guid.NewGuid(),
-                            Title = "Senior Network Specialist",
-                            Salary = 2600,
-                            PostDate = DateTime.Now,
-                            ExperienceLevel = "Junior",
-                            EmploymentType = "Напълно работно време",
-                            Location = "Дистанционна работа",
-                            CompanyId = companies[0].Id,
-                            CategoryId = jobCategories[0].Id,
-                        },
-                        new Job
+                    new JobCategory {Id = Guid.NewGuid(), Name = "IT"},
+                    new JobCategory {Id = Guid.NewGuid(), Name = "Finance"},
+                    new JobCategory {Id = Guid.NewGuid(), Name = "Marketing"},
+                    new JobCategory {Id = Guid.NewGuid(), Name = "Human Resources"}
+                };
+                        context.JobCategories.AddRange(categories);
+                        await context.SaveChangesAsync();
+                        Console.WriteLine("Job categories seeded.");
+                    }
+
+                    // Seed Companies
+                    if (!context.Companies.Any())
+                    {
+                        var companies = new[]
                         {
-                            Id = Guid.NewGuid(),
-                            Title = "Senior C# Developer",
-                            Salary = 2100,
-                            PostDate = DateTime.Now,
-                            ExperienceLevel = "",
-                            EmploymentType = "Напълно работно време",
-                            Location = "София",
-                            CompanyId = companies[1].Id,
-                            CategoryId = jobCategories[1].Id,
+                    new Company {Id = Guid.NewGuid(), Name = "DXC Technology", Location = "Sofia", Description = "A leading tech company."},
+                    new Company {Id = Guid.NewGuid(), Name = "myPOS", Location = "Varna", Description = "Fintech solutions."},
+                    new Company {Id = Guid.NewGuid(), Name = "IBM Bulgaria", Location = "Plovdiv", Description = "A leading provider of IT services."},
+                    new Company {Id = Guid.NewGuid(), Name = "SAP Labs", Location = "Burgas", Description = "An enterprise application software company."}
+                };
+                        context.Companies.AddRange(companies);
+                        await context.SaveChangesAsync();
+                        Console.WriteLine("Companies seeded.");
+                    }
+
+                    // Seed Jobs
+                    if (!context.Jobs.Any())
+                    {
+                        var jobCategories = context.JobCategories.ToList();
+                        var companies = context.Companies.ToList();
+
+                        var jobTitles = new List<string>
+                {
+                    "Junior Software Developer",
+                    "Senior Network Specialist",
+                    "Marketing Specialist",
+                    "Finance Analyst",
+                    "HR Specialist",
+                    "IT Support Technician"
+                };
+
+                        var employmentTypes = new[] { "Full-Time", "Part-Time", "Contract" };
+                        var experienceLevels = new[] { "Junior", "Mid", "Senior" };
+                        var locations = new[] { "Remote", "On-site", "Hybrid" };
+                        var descriptions = new List<string>
+                {
+                    "This position requires a passionate individual ready to grow and learn.",
+                    "We are looking for a motivated person to join our growing team.",
+                    "The ideal candidate will be responsible for designing and developing scalable solutions.",
+                    "The job involves building and maintaining web applications using the latest technologies."
+                };
+                        var responsibilitiesList = new List<string>
+                {
+                    "- Write clean and efficient code.\n- Debug and maintain applications.\n- Collaborate with team members.",
+                    "- Implement high-quality software according to requirements.\n- Participate in code reviews.\n- Assist junior developers.",
+                    "- Troubleshoot and resolve customer issues.\n- Manage software configurations.\n- Ensure optimal system performance.",
+                    "- Lead a small team of developers.\n- Manage project timelines.\n- Interface with clients to gather project requirements."
+                };
+                        var requirementsList = new List<string>
+                {
+                    "- Bachelor's degree in Computer Science or related field.\n- 1+ years of experience with C# or Java.",
+                    "- Excellent problem-solving skills.\n- Experience working in an Agile environment.",
+                    "- Strong understanding of REST APIs.\n- Ability to work independently.\n- Knowledge of cloud platforms.",
+                    "- Proficiency in one or more programming languages.\n- Excellent teamwork skills.\n- Experience with Git."
+                };
+                        var benefitsList = new List<string>
+                {
+                    "- Competitive salary.\n- Health and dental insurance.\n- Flexible working hours.",
+                    "- Annual performance bonus.\n- Work from home opportunities.\n- Paid time off and holidays.",
+                    "- Company-sponsored health programs.\n- Free parking.\n- Gym membership discounts.",
+                    "- Relocation package for qualified candidates.\n- Free snacks and coffee.\n- Collaborative work environment."
+                };
+
+                        var jobs = new List<Job>();
+
+                        for (int i = 0; i < 10; i++) // Seeding 10 jobs as an example
+                        {
+                            var job = new Job
+                            {
+                                Id = Guid.NewGuid(),
+                                Title = jobTitles[rnd.Next(jobTitles.Count)],
+                                Salary = rnd.Next(2000, 6000), // Random salary between 2000 and 6000
+                                PostDate = DateTime.Now.AddDays(-rnd.Next(0, 30)), // Random post date within the last 30 days
+                                ExperienceLevel = experienceLevels[rnd.Next(experienceLevels.Length)],
+                                EmploymentType = employmentTypes[rnd.Next(employmentTypes.Length)],
+                                Location = locations[rnd.Next(locations.Length)],
+                                CompanyId = companies[rnd.Next(companies.Count)].Id,
+                                CategoryId = jobCategories[rnd.Next(jobCategories.Count)].Id,
+                                Description = descriptions[rnd.Next(descriptions.Count)],
+                                Responsibilities = responsibilitiesList[rnd.Next(responsibilitiesList.Count)],
+                                Requirements = requirementsList[rnd.Next(requirementsList.Count)],
+                                Benefits = benefitsList[rnd.Next(benefitsList.Count)]
+                            };
+
+                            jobs.Add(job);
                         }
-                    };
 
-                    context.Jobs.AddRange(jobs);
-                    await context.SaveChangesAsync();
+                        context.Jobs.AddRange(jobs);
+                        await context.SaveChangesAsync();
+                        Console.WriteLine("Jobs seeded.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error during seeding: {ex.Message}");
                 }
             }
         }
+
+
     }
 }

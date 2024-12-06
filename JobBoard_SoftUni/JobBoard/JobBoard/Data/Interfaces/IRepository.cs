@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobBoard.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -14,5 +15,8 @@ namespace JobBoard.Data.Interfaces
         Task AddAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
         Task RemoveAsync(TEntity entity);
+
+        Task<IEnumerable<JobCategory>> GetJobCategoriesAsync();
+
     }
 }
