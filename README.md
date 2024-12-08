@@ -19,11 +19,14 @@ This role is responsible for adding new job adverts as well as deleting or updat
 
 ## Functionality
 
+## Home page
+![image](https://github.com/user-attachments/assets/21784e5b-33d2-44e9-a07f-6400f8c61ff1)
+
 ## Login page
-![image](https://github.com/user-attachments/assets/92499180-1b1f-4413-a3a5-08f7bb64ebf1)
+![image](https://github.com/user-attachments/assets/c36dcf6c-f1ac-471b-aa24-7c618547738c)
 
 ## Register page
-![image](https://github.com/user-attachments/assets/4390bda1-2dc0-42be-9ae7-959c7d5ee8ae)
+![image](https://github.com/user-attachments/assets/bd5dd474-ec17-402c-9bfe-d727e0ec1b28)
 
 ## Listing all job positions
 ![image](https://github.com/user-attachments/assets/c272214e-8ffa-4a8d-8b9e-5b9de06861f5)
@@ -31,6 +34,9 @@ This role is responsible for adding new job adverts as well as deleting or updat
 ## Job description
 ![image](https://github.com/user-attachments/assets/d6e2ed61-c292-4cb0-b4ba-f5c2b5082ae0)
 
+
+## If user try to apply or save a job without logged in
+![image](https://github.com/user-attachments/assets/545b2083-5b6a-4df6-a473-ad713adbce2d)
 
 ## Used technologies
 * ASP.NET Core MVC 
