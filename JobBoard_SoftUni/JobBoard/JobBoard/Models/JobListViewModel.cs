@@ -9,6 +9,6 @@ namespace JobBoard.Models
         public int TotalPages { get; set; }
         public string SearchTerm { get; set; }
         public string SelectedCategory { get; set; }
-        public IEnumerable<JobCategory> Categories { get; set; }
+        public List<CategoryViewModel> Categories { get; set; }
     }
 }

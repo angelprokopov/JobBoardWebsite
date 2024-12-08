@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using JobBoard.Data.Interfaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 
 namespace JobBoard
 {
@@ -27,8 +29,6 @@ namespace JobBoard
 
             // builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<JobBoardContext>();
 
-           // builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<JobBoardContext>();
-
             // Configure Identity
             builder.Services.AddIdentity<User, Role>(options =>
             {
@@ -36,18 +36,11 @@ namespace JobBoard
                 options.SignIn.RequireConfirmedAccount = true;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(8);
                 options.Lockout.MaxFailedAccessAttempts = 6;
+                options.Tokens.EmailConfirmationTokenProvider = "Default";
             })
             .AddRoles<Role>()
             .AddEntityFrameworkStores<JobBoardContext>()
             .AddDefaultTokenProviders();
-
-            // Add external authentication providers
-            builder.Services.AddAuthentication()
-                .AddGoogle(options =>
-                {
-                    options.ClientId = config["Authentication:Google:ClientId"];
-                    options.ClientSecret = config["Authentication:Google:ClientSecret"];
-                });
 
             // Add authorization policies
             builder.Services.AddAuthorization(options =>
@@ -65,8 +58,9 @@ namespace JobBoard
             {
                 options.Cookie.HttpOnly = true;
                 options.ExpireTimeSpan = TimeSpan.FromDays(14);
-                options.LoginPath = "/Account/Login";
-                options.LogoutPath = "/Account/Logout";
+                options.LoginPath = "/Identity/Account/Login";
+                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                options.LogoutPath = "/Identity/Account/Logout";
                 options.SlidingExpiration = true;
             });
 

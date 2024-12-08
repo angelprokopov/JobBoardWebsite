@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<JobBoard.Data.Models.User> SignInManager
+
+
+@if (Model?.ExternalLogins != null && Model.ExternalLogins.Count > 0)
+{
+    <div>
+        @foreach (var provider in Model.ExternalLogins)
+        {
+            <button type="submit" class="btn btn-outline-primary" name="provider" value="@provider.Name">
+                Sign in with @provider.DisplayName
+            </button>
+        }
+    </div>
+}
+else
+{
+    <p>No external authentication services configured.</p>
+}

@@ -32,7 +32,7 @@ namespace JobBoard.Tests.Controllers
             var controller = new JobController(mockupJobRepo.Object, mockupApplicationRepo.Object);
 
             // Act
-            var result = await controller.All("Engineer", 1, 10);
+            var result = await controller.All("Engineer", "Finance", 10);
 
             // Assert
             var viewResult = Assert.IsType<ViewResult>(result);
