@@ -343,10 +343,8 @@ C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\com
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\9xghahyask-3mo3gylw03.gz
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\amrks1nfin-ob6bggd25d.gz
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\xw4fuz2xu1-dttua4tpwt.gz
-C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\lyhii11p33-yqyqss0r6b.gz
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\gazx13kz8d-61n19gt1b8.gz
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\zitk8ck37u-uj3z22w62c.gz
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\xnz30pu8oh-xtxxf3hu2r.gz
@@ -424,4 +422,6 @@ C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\ref
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\JobBoard.pdb
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\JobBoard.genruntimeconfig.cache
 C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\ref\JobBoard.dll
-C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\llfyangg91-9pdg5zg5gt.gz
+C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\9xghahyask-okv4aps1w5.gz
+C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\llfyangg91-9th5gbmbmy.gz
+C:\Users\Angel\Downloads\JobBoard_SoftUni\JobBoard\JobBoard\obj\Debug\net9.0\compressed\lyhii11p33-8ckmruk32n.gz

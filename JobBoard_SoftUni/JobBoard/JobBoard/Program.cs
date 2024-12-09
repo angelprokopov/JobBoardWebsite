@@ -116,10 +116,27 @@ namespace JobBoard
             await app.RunAsync();
         }
 
+        private static async Task SeedRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<Role>>();
+
+            var roles = new List<string> { "Admin", "Employer", "User" };
+
+            foreach (var role in roles)
+            {
+                if (!await roleManager.RoleExistsAsync(role))
+                {
+                    await roleManager.CreateAsync(new Role { Name = role });
+                }
+            }
+        }
+        
+
         private static async Task SeedDatabaseAsync(WebApplication app)
         {
             using (var scope = app.Services.CreateScope())
             {
+                var serviceProvider = scope.ServiceProvider;
                 var context = scope.ServiceProvider.GetRequiredService<JobBoardContext>();
 
                 if (!await context.Database.CanConnectAsync())
@@ -130,6 +147,8 @@ namespace JobBoard
 
                 try
                 {
+                    await SeedRoles(serviceProvider);
+
                     Random rnd = new Random();
 
                     // Deleting existing records to reseed database (optional)

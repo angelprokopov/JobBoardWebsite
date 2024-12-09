@@ -1,8 +1,22 @@
-﻿.hero-section .overlay{
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+﻿.hero-section {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient */
+    color: white;
+    height: 60vh;
 }
 
-.features {
-    font-size: 2.5rem;
-    margin-bottom: 18px;
-}
+    .hero-section h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .hero-section p {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-section .btn {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
