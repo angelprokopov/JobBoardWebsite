@@ -23,10 +23,10 @@ This role is responsible for adding new job adverts as well as deleting or updat
 ![image](https://github.com/user-attachments/assets/21784e5b-33d2-44e9-a07f-6400f8c61ff1)
 
 ## Login page
-![image](https://github.com/user-attachments/assets/c36dcf6c-f1ac-471b-aa24-7c618547738c)
+![image](https://github.com/user-attachments/assets/69b39c3b-3776-4cce-9f5d-6b9802fc2668)
 
 ## Register page
-![image](https://github.com/user-attachments/assets/bd5dd474-ec17-402c-9bfe-d727e0ec1b28)
+![image](https://github.com/user-attachments/assets/1dd9f511-cac9-4f4f-bac6-6420d2626e0e)
 
 ## Listing all job positions
 ![image](https://github.com/user-attachments/assets/c272214e-8ffa-4a8d-8b9e-5b9de06861f5)
