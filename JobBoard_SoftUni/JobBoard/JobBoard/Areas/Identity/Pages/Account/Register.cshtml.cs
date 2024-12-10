@@ -107,6 +107,9 @@ namespace JobBoard.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Required(ErrorMessage = "Please select a role.")]
+            public string Role { get; set; }
         }
 
 
@@ -115,44 +118,38 @@ namespace JobBoard.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
-            Roles = (await _roleManager.Roles.ToListAsync())
-                .Select(r => new SelectListItem 
+           Roles = await _roleManager.Roles
+                .Select(role=>new SelectListItem
                 {
-                    Value = r.Name,
-                    Text = r.Name
-                }).ToList();
+                    Value = role.Name,
+                    Text = role.Name
+                })
+                .ToListAsync();
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
+            {
+                await OnGetAsync();
                 return Page();
+            }
+
 
             var user = new User
             {
                 UserName = Input.Email,
                 Email = Input.Email
             };
-
             var result = await _userManager.CreateAsync(user, Input.Password);
-
             if (result.Succeeded)
             {
-                if (!string.IsNullOrEmpty(Role))
+                if (!string.IsNullOrWhiteSpace(Input.Role) && await _roleManager.RoleExistsAsync(Input.Role))
                 {
-                    var roleExists = await _roleManager.RoleExistsAsync(Role);
-                    if (roleExists)
-                    {
-                        await _userManager.AddToRoleAsync(user, Role);
-                    }
-                }
-                else
-                {
-                    await _userManager.AddToRoleAsync(user, "User"); // Default to "User"
+                    await _userManager.AddToRoleAsync(user, Input.Role);
                 }
 
-                // Redirect to confirmation page or login
-                return RedirectToPage("RegisterConfirmation", new { email = Input.Email });
+                return RedirectToPage("/Account/Login", new { area = "Identity" });
             }
 
             foreach (var error in result.Errors)
@@ -160,8 +157,10 @@ namespace JobBoard.Areas.Identity.Pages.Account
                 ModelState.AddModelError(string.Empty, error.Description);
             }
 
+            await OnGetAsync(); // Repopulate roles if there are errors
             return Page();
-        }
+        }        
+        
 
         private User CreateUser()
         {

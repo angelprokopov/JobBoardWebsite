@@ -29,9 +29,13 @@
         </div>
 
         <div class="form-group mb-3">
-            <label asp-for="Role" class="control-label">Регистрация като</label>
-            <select asp-for="Role" class="form-control" asp-items="Model.Roles">
-                <option value="">-- Избери роля --</option>
+            <label for="Role" class="form-label">Select Role</label>
+            <select asp-for="Role" class="form-control">
+                <option value="" disabled selected>Select a role</option>
+                @foreach (var role in Model.Roles)
+                {
+                    <option value="@role.Value">@role.Text</option>
+                }
             </select>
             <span asp-validation-for="Role" class="text-danger"></span>
         </div>

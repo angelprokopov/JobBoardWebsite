@@ -116,28 +116,16 @@ namespace JobBoard
             await app.RunAsync();
         }
 
-        private static async Task SeedRoles(IServiceProvider serviceProvider)
-        {
-            var roleManager = serviceProvider.GetRequiredService<RoleManager<Role>>();
-
-            var roles = new List<string> { "Admin", "Employer", "User" };
-
-            foreach (var role in roles)
-            {
-                if (!await roleManager.RoleExistsAsync(role))
-                {
-                    await roleManager.CreateAsync(new Role { Name = role });
-                }
-            }
-        }
-        
-
         private static async Task SeedDatabaseAsync(WebApplication app)
         {
             using (var scope = app.Services.CreateScope())
             {
                 var serviceProvider = scope.ServiceProvider;
                 var context = scope.ServiceProvider.GetRequiredService<JobBoardContext>();
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
+                var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+
+                await SeedRoles(roleManager);
 
                 if (!await context.Database.CanConnectAsync())
                 {
@@ -147,7 +135,7 @@ namespace JobBoard
 
                 try
                 {
-                    await SeedRoles(serviceProvider);
+                   
 
                     Random rnd = new Random();
 
@@ -273,6 +261,35 @@ namespace JobBoard
             }
         }
 
+        private static async Task SeedRoles(RoleManager<Role> roleManager)
+        {
+            var roles = new[] { "Admin", "Employer", "User" };
 
+            foreach (var role in roles)
+            {
+                if (string.IsNullOrWhiteSpace(role))
+                {
+                    Console.WriteLine("Role name is null or empty. Skipping.");
+                    continue; // Skip invalid role names.
+                }
+
+                if (!await roleManager.RoleExistsAsync(role))
+                {
+                    var result = await roleManager.CreateAsync(new Role { Name = role });
+                    if (result.Succeeded)
+                    {
+                        Console.WriteLine($"Role '{role}' created successfully.");
+                    }
+                    else
+                    {
+                        throw new Exception($"Failed to create role '{role}': {string.Join(", ", result.Errors.Select(e => e.Description))}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"Role '{role}' already exists.");
+                }
+            }
+        }
     }
 }
