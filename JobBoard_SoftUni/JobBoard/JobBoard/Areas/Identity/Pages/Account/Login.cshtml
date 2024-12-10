@@ -8,7 +8,8 @@
 <div class="container">
     <h2 class="mb-4">Портал за обяви за работа</h2>
     <p>Моля влезте в профила си, за да можете да кандидатствате</p>
-    <form id="account" method="post">
+    <form id="account" method="post" asp-page="/Account/Login">
+        @Html.AntiForgeryToken()
         <div class="form-group mb-3">
             <label asp-for="Input.Email" class="form-label">Имейл</label>
             <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />

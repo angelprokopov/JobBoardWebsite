@@ -9,7 +9,8 @@
     <h2>Създай своя акаунт</h2>
     <p>Моля, попълнете формуляра, за да създадете своя акаунт.</p>
 
-    <form method="post" asp-route-returnurl="@Model.ReturnUrl">
+    <form method="post" asp-page="/Account/Register">
+        @Html.AntiForgeryToken()
         <div class="mb-3">
             <label asp-for="Input.Email" class="form-label">Имейл</label>
             <input asp-for="Input.Email" class="form-control" />

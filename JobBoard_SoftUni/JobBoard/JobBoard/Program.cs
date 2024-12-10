@@ -105,6 +105,7 @@ namespace JobBoard
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseAntiforgery();
             app.UseAuthentication();
             app.UseAuthorization();
 
